@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace DIPR.Data
     public class BottleFeeding
     {
         [Key]
-        public int BottleFeedingID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public DateTime Time { get; set; }
@@ -24,6 +25,13 @@ namespace DIPR.Data
         [Required]
         public Contents Contents { get; set; }
         public string Notes { get; set; }
+
+        [Required]
+        public int BabyID { get; set; }
+
+        [ForeignKey(nameof(BabyID))]
+        public virtual Baby Baby { get; set; }
+
     }
 
     public enum Contents

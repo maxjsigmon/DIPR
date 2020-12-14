@@ -11,7 +11,7 @@ namespace DIPR.Data
     public class Baby
     {
         [Key]
-        public int BabyID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public string Name { get; set; }
