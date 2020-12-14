@@ -22,6 +22,9 @@
         <th>
             @Html.DisplayNameFor(model => model.BirthDate)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
         <th></th>
     </tr>
 
@@ -37,6 +40,9 @@
 
     <td>
         @Html.DisplayFor(modelItem => item.BirthDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Notes)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.BabyID }) |

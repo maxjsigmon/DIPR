@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Baby\BabyCreate.cs" />
+    <Compile Include="Baby\BabyDetail.cs" />
+    <Compile Include="Baby\BabyEdit.cs" />
     <Compile Include="Baby\BabyListItem.cs" />
     <Compile Include="Diaper\DiaperCreate.cs" />
     <Compile Include="Diaper\DiaperListItem.cs" />

@@ -51,6 +51,40 @@ namespace DIPR.WebMVC.Controllers
 
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateBabyService();
+            var model = svc.GetBabyById(id);
+
+            return View(model);
+        }
+
+        
+
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateBabyService();
+            var model = svc.GetBabyById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteBaby(int id)
+        {
+            var service = CreateBabyService();
+
+            service.DeleteBaby(id);
+
+            TempData["SaveResult"] = "You've deleted the selected baby.";
+
+            return RedirectToAction("Index");
+
+
+        }
+
         private BabyService CreateBabyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

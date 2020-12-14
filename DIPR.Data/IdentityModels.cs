@@ -32,5 +32,6 @@ namespace DIPR.WebMVC.Data
         }
 
         public DbSet<Baby> Babies { get; set; }
+        public DbSet<Diaper> Diapers { get; set; }
     }
 }

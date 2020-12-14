@@ -28,7 +28,8 @@ namespace DIPR.Services
                     ParentID = _userID,
                     Name = model.Name,
                     Gender = (Data.Gender)model.Gender,
-                    BirthDate = model.BirthDate
+                    BirthDate = model.BirthDate,
+                    Notes = model.Notes
 
                 };
 
@@ -54,13 +55,44 @@ namespace DIPR.Services
                                     BabyID = e.ID,
                                     Name = e.Name,
                                     Gender = (Gender)e.Gender,
-                                    BirthDate = e.BirthDate
+                                    BirthDate = e.BirthDate,
+                                    Notes = e.Notes
                                 }
                                 );
                 return query.ToArray();
             }
         }
 
-       
+       public BabyDetail GetBabyById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Babies
+                        .Single(e => e.ID == id && e.ParentID == _userID);
+                return
+                    new BabyDetail
+                    {
+                        BabyId = entity.ID,
+                        Name = entity.Name
+                    };
+            }
+        }
+
+        public bool DeleteBaby(int babyID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Babies
+                        .Single(e => e.ID == babyID && e.ParentID == _userID);
+
+                ctx.Babies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
