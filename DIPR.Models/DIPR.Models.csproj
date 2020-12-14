@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Baby\BabyCreate.cs" />
     <Compile Include="Baby\BabyListItem.cs" />
+    <Compile Include="Diaper\DiaperCreate.cs" />
+    <Compile Include="Diaper\DiaperListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
