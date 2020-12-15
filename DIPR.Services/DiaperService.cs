@@ -48,7 +48,7 @@ namespace DIPR.Services
                             e =>
                                 new DiaperListItem
                                 {
-                                    BabyID = e.BabyID,
+                                    Name = e.Baby.Name,
                                     DiaperID = e.ID,
                                     Soiled = e.Soiled,
                                     Time = e.Time,
@@ -73,6 +73,23 @@ namespace DIPR.Services
                         DiaperID = entity.ID,
                         Time = entity.Time
                     };
+            }
+        }
+
+        public bool UpdateDiaper(DiaperEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Diapers
+                        .Single(e => e.ID == model.DiaperID && e.ParentID == _userID);
+                entity.Soiled = model.Soiled;
+                entity.Time = model.Time;
+                entity.Notes = model.Notes;
+                
+
+                return ctx.SaveChanges() == 1;
             }
         }
 

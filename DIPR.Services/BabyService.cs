@@ -75,9 +75,25 @@ namespace DIPR.Services
                     new BabyDetail
                     {
                         BabyId = entity.ID,
-                        Name = entity.Name,
-                        //ListOfDiapers = entity.ListOfDiapers
+                        Name = entity.Name
                     };
+            }
+        }
+
+        public bool UpdateBaby(BabyEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Babies
+                        .Single(e => e.ID == model.BabyID && e.ParentID == _userID);
+                entity.Name = model.Name;
+                entity.Gender = (Data.Gender)model.Gender;
+                entity.Notes = model.Notes;
+                entity.BirthDate = model.BirthDate;
+
+                return ctx.SaveChanges() == 1;
             }
         }
 

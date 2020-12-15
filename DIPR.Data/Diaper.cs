@@ -30,7 +30,6 @@ namespace DIPR.Data
         [ForeignKey(nameof(BabyID))]
         public virtual Baby Baby { get; set; }
     }
-
     public enum Soiled
     {
         Wet,

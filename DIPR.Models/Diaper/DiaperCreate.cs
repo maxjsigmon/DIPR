@@ -12,6 +12,9 @@ namespace DIPR.Models.Diaper
     public class DiaperCreate
     {
         public int BabyID { get; set; }
+
+        public string Name { get; set; }
+
         [Required]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm")]

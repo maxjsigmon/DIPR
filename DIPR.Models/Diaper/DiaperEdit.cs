@@ -11,6 +11,7 @@ namespace DIPR.Models.Diaper
     {
         public int DiaperID { get; set; }
         public Soiled Soiled { get; set; }
+        public DateTime Time { get; set; }
         public string Notes { get; set; }
     }
 }

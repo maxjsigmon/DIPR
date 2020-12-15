@@ -53,6 +53,42 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateDiaperService();
+            var detail = service.GetDiaperById(id);
+            var model =
+                new DiaperEdit
+                {
+                    DiaperID = detail.DiaperID,
+                    Time = detail.Time
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, DiaperEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.DiaperID != id)
+            {
+                ModelState.AddModelError("", "ID Mismatch");
+                return View(model);
+            }
+            var service = CreateDiaperService();
+
+            if (service.UpdateDiaper(model))
+            {
+                TempData["SaveResult"] = "The diaper was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "The diaper could not be updated.");
+            return View();
+        }
+
         public ActionResult Delete(int id)
         {
             var svc = CreateDiaperService();

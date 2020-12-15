@@ -13,17 +13,11 @@ namespace DIPR.Models.Diaper
         [Key]
         public int BabyID { get; set; }
         public int DiaperID { get; set; }
+        public string Name { get; set; }
         public DateTime Time { get; set; }
         public Soiled Soiled { get; set; }
         public string Notes { get; set; }
 
         //public List<DiaperListItem> TotalDiapers = new List<DiaperListItem>();
     }
-
-    //public enum Soiled
-    //{
-    //    Wet,
-    //    Dirty,
-    //    Both
-    //}
 }

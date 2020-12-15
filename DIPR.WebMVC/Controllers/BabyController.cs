@@ -1,5 +1,6 @@
 ﻿using DIPR.Data;
 using DIPR.Models;
+using DIPR.Models.Baby;
 using DIPR.Services;
 using DIPR.WebMVC.Data;
 using Microsoft.AspNet.Identity;
@@ -59,7 +60,41 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
-        
+        public ActionResult Edit(int id)
+        {
+            var service = CreateBabyService();
+            var detail = service.GetBabyById(id);
+            var model =
+                new BabyEdit
+                {
+                    BabyID = detail.BabyId,
+                    Name = detail.Name
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, BabyEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.BabyID != id)
+            {
+                ModelState.AddModelError("", "ID Mismatch");
+                return View(model);
+            }
+            var service = CreateBabyService();
+
+            if (service.UpdateBaby(model))
+            {
+                TempData["SaveResult"] = "The baby was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "The baby could not be updated.");
+            return View();
+        }
 
         public ActionResult Delete(int id)
         {
@@ -68,6 +103,7 @@ namespace DIPR.WebMVC.Controllers
 
             return View(model);
         }
+
 
         [HttpPost]
         [ActionName("Delete")]
@@ -81,7 +117,6 @@ namespace DIPR.WebMVC.Controllers
             TempData["SaveResult"] = "You've deleted the selected baby.";
 
             return RedirectToAction("Index");
-
 
         }
 

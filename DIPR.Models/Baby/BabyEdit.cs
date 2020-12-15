@@ -10,6 +10,7 @@ namespace DIPR.Models.Baby
     {
         public int BabyID { get; set; }
         public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
         public string Notes { get; set; }
         

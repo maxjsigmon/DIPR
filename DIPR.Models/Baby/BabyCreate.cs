@@ -12,12 +12,14 @@ namespace DIPR.Models
     public class BabyCreate
     {
         [Required]
-        [MaxLength(15, ErrorMessage = "There are too many characters. Please consider changing the baby's name.")]
+        [MaxLength(15, ErrorMessage = "There are too many characters. Please, consider changing the baby's name.")]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name ="Birth Date")]
+        public Gender Gender { get; set; }
 
+        [Required]
+        [Display(Name ="Birth Date")]
         public DateTime BirthDate { get; set; }
 
         public string Notes { get; set; }
@@ -28,9 +30,6 @@ namespace DIPR.Models
         }
 
         public SelectList GenderList { get; set; }
-
-        [Required]
-        public Gender Gender { get; set; }
 
         public static SelectList GetGenderSelectList()
         {

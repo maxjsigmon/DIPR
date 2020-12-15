@@ -12,7 +12,7 @@ namespace DIPR.Models.Baby
         public int BabyId { get; set; }
         public string Name { get; set; }
 
-        public List<DiaperListItem> ListOfDiapers { get; set; } = new List<DiaperListItem>();
+        //public List<DiaperListItem> ListOfDiapers { get; set; } = new List<DiaperListItem>();
 
     }
 }
