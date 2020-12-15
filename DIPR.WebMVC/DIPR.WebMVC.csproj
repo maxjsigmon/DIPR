@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BabyController.cs" />
+    <Compile Include="Controllers\DiaperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -239,6 +240,10 @@
     <Content Include="Views\Baby\Create.cshtml" />
     <Content Include="Views\Baby\Details.cshtml" />
     <Content Include="Views\Baby\Delete.cshtml" />
+    <Content Include="Views\Diaper\DeleteDiaper.cshtml" />
+    <Content Include="Views\Diaper\Index.cshtml" />
+    <Content Include="Views\Diaper\Create.cshtml" />
+    <Content Include="Views\Diaper\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

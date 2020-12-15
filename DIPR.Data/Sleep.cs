@@ -12,6 +12,10 @@ namespace DIPR.Data
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
+        public Guid ParentID { get; set; }
+
         [Required]
         public Location Location { get; set; }
         [Required]

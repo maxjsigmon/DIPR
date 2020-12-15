@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace DIPR.Data
         public DateTime BirthDate { get; set; }
         public string Notes { get; set; }
 
-        
+        //public List<DiaperListItem> ListOfDiapers { get; set; } = new List<DiaperListItem>();
     }
 
     public enum Gender

@@ -1,7 +1,5 @@
-﻿using DIPR.Data;
-using DIPR.Models;
+﻿using DIPR.Models.Diaper;
 using DIPR.Services;
-using DIPR.WebMVC.Data;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,17 +9,14 @@ using System.Web.Mvc;
 
 namespace DIPR.WebMVC.Controllers
 {
-    [Authorize]
-    public class BabyController : Controller
+    public class DiaperController : Controller
     {
-        //private ApplicationDbContext _babyDb = new ApplicationDbContext();
-
-        // GET: Baby
+        // GET: Diaper
         public ActionResult Index()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
-            var service = new BabyService(userID);
-            var model = service.GetBaby();
+            var service = new DiaperService(userID);
+            var model = service.GetDiaper();
 
             return View(model);
         }
@@ -33,38 +28,35 @@ namespace DIPR.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(BabyCreate model)
+        public ActionResult Create(DiaperCreate model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = CreateBabyService();
+            var service = CreateDiaperService();
 
-            if (service.CreateBaby(model))
+            if (service.CreateDiaper(model))
             {
-                TempData["SaveResult"] = "Your baby has been added!";
+                TempData["SaveResult"] = "Your baby's diaper has been added!";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Your baby could not be added. Please, try again.");
+            ModelState.AddModelError("", "Your baby's diaper could not be added. Please, try again.");
 
             return View(model);
-
         }
 
         public ActionResult Details(int id)
         {
-            var svc = CreateBabyService();
-            var model = svc.GetBabyById(id);
+            var svc = CreateDiaperService();
+            var model = svc.GetDiaperById(id);
 
             return View(model);
         }
 
-        
-
         public ActionResult Delete(int id)
         {
-            var svc = CreateBabyService();
-            var model = svc.GetBabyById(id);
+            var svc = CreateDiaperService();
+            var model = svc.GetDiaperById(id);
 
             return View(model);
         }
@@ -72,23 +64,21 @@ namespace DIPR.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteBaby(int id)
+        public ActionResult DeleteDiaper(int id)
         {
-            var service = CreateBabyService();
+            var service = CreateDiaperService();
 
-            service.DeleteBaby(id);
+            service.DeleteDiaper(id);
 
-            TempData["SaveResult"] = "You've deleted the selected baby.";
+            TempData["SaveResult"] = "You've deleted the selected diaper.";
 
             return RedirectToAction("Index");
-
-
         }
 
-        private BabyService CreateBabyService()
+        private DiaperService CreateDiaperService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new BabyService(userId);
+            var service = new DiaperService(userId);
             return service;
         }
     }

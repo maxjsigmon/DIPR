@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIPR.Models.Diaper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace DIPR.Models.Baby
     {
         public int BabyId { get; set; }
         public string Name { get; set; }
+
+        public List<DiaperListItem> ListOfDiapers { get; set; } = new List<DiaperListItem>();
 
     }
 }

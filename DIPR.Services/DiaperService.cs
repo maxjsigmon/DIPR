@@ -1,61 +1,57 @@
 ﻿using DIPR.Data;
-using DIPR.Models;
-using DIPR.Models.Baby;
+using DIPR.Models.Diaper;
 using DIPR.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Mvc;
-using Gender = DIPR.Models.Baby.Gender;
 
 namespace DIPR.Services
 {
-   public class BabyService
+    public class DiaperService
     {
         private readonly Guid _userID;
 
-        public BabyService(Guid userID)
+        public DiaperService(Guid userID)
         {
             _userID = userID;
         }
-        public bool CreateBaby(BabyCreate model)
+        public bool CreateDiaper(DiaperCreate model)
         {
             var entity =
-                new Baby()
+                new Diaper()
                 {
                     ParentID = _userID,
-                    Name = model.Name,
-                    Gender = (Data.Gender)model.Gender,
-                    BirthDate = model.BirthDate,
+                    BabyID = model.BabyID,
+                    Soiled = model.Soiled,
+                    Time = model.Time,
                     Notes = model.Notes
-
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Babies.Add(entity);
+                ctx.Diapers.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<BabyListItem> GetBaby()
+        public IEnumerable<DiaperListItem> GetDiaper()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Babies
+                        .Diapers
                         .Where(e => e.ParentID == _userID)
                         .Select(
                             e =>
-                                new BabyListItem
+                                new DiaperListItem
                                 {
-                                    BabyID = e.ID,
-                                    Name = e.Name,
-                                    Gender = (Gender)e.Gender,
-                                    BirthDate = e.BirthDate,
+                                    BabyID = e.BabyID,
+                                    DiaperID = e.ID,
+                                    Soiled = e.Soiled,
+                                    Time = e.Time,
                                     Notes = e.Notes
                                 }
                                 );
@@ -63,34 +59,33 @@ namespace DIPR.Services
             }
         }
 
-       public BabyDetail GetBabyById(int id)
+        public DiaperDetails GetDiaperById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Babies
+                        .Diapers
                         .Single(e => e.ID == id && e.ParentID == _userID);
                 return
-                    new BabyDetail
+                    new DiaperDetails
                     {
-                        BabyId = entity.ID,
-                        Name = entity.Name,
-                        //ListOfDiapers = entity.ListOfDiapers
+                        DiaperID = entity.ID,
+                        Time = entity.Time
                     };
             }
         }
 
-        public bool DeleteBaby(int babyID)
+        public bool DeleteDiaper(int diaperID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Babies
-                        .Single(e => e.ID == babyID && e.ParentID == _userID);
+                        .Diapers
+                        .Single(e => e.ID == diaperID && e.ParentID == _userID);
 
-                ctx.Babies.Remove(entity);
+                ctx.Diapers.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

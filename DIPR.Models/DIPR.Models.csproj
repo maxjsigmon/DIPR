@@ -68,11 +68,19 @@
     <Compile Include="Baby\BabyEdit.cs" />
     <Compile Include="Baby\BabyListItem.cs" />
     <Compile Include="Diaper\DiaperCreate.cs" />
+    <Compile Include="Diaper\DiaperDetails.cs" />
+    <Compile Include="Diaper\DiaperEdit.cs" />
     <Compile Include="Diaper\DiaperListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DIPR.Data\DIPR.Data.csproj">
+      <Project>{adfa30d4-f312-4bf4-9aef-d24794dc7905}</Project>
+      <Name>DIPR.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
