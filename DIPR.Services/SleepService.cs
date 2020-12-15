@@ -1,5 +1,5 @@
 ﻿using DIPR.Data;
-using DIPR.Models.Diaper;
+using DIPR.Models.Sleep;
 using DIPR.WebMVC.Data;
 using System;
 using System.Collections.Generic;
@@ -9,99 +9,102 @@ using System.Threading.Tasks;
 
 namespace DIPR.Services
 {
-    public class DiaperService
+    public class SleepService
     {
         private readonly Guid _userID;
 
-        public DiaperService(Guid userID)
+        public SleepService(Guid userID)
         {
             _userID = userID;
         }
-        public bool CreateDiaper(DiaperCreate model)
+
+        public bool CreateSleep(SleepCreate model)
         {
             var entity =
-                new Diaper()
+                new Sleep()
                 {
                     ParentID = _userID,
                     BabyID = model.BabyID,
-                    Soiled = model.Soiled,
-                    Time = model.Time,
+                    Location = model.Location,
+                    SleepStart = model.SleepStart,
+                    SleepEnd = model.SleepEnd,
                     Notes = model.Notes
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Diapers.Add(entity);
+                ctx.Sleeps.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<DiaperListItem> GetDiaper()
+        public IEnumerable<SleepListItem> GetSleep()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Diapers
+                        .Sleeps
                         .Where(e => e.ParentID == _userID)
                         .Select(
                             e =>
-                                new DiaperListItem
+                                new SleepListItem
                                 {
                                     Name = e.Baby.Name,
-                                    DiaperID = e.ID,
-                                    Soiled = e.Soiled,
-                                    Time = e.Time,
+                                    SleepID = e.ID,
+                                    Location = e.Location,
+                                    SleepStart = e.SleepStart,
+                                    SleepEnd = e.SleepEnd,
                                     Notes = e.Notes
                                 }
                                 );
                 return query.ToArray();
             }
         }
-
-        public DiaperDetails GetDiaperById(int id)
+        public SleepDetail GetSleepById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Diapers
+                        .Sleeps
                         .Single(e => e.ID == id && e.ParentID == _userID);
                 return
-                    new DiaperDetails
+                    new SleepDetail
                     {
-                        DiaperID = entity.ID,
-                        Time = entity.Time
+                        SleepID = entity.ID,
+                        TotalSleep = entity.TotalSleep
                     };
             }
         }
 
-        public bool UpdateDiaper(DiaperEdit model)
+        public bool UpdateSleep(SleepEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Diapers
-                        .Single(e => e.ID == model.DiaperID && e.ParentID == _userID);
-                entity.Soiled = model.Soiled;
-                entity.Time = model.Time;
+                        .Sleeps
+                        .Single(e => e.ID == model.SleepID && e.ParentID == _userID);
+                entity.Location = model.Location;
+                entity.SleepStart = model.SleepStart;
+                entity.SleepEnd = model.SleepEnd;
                 entity.Notes = model.Notes;
-                
+
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteDiaper(int diaperID)
+        public bool DeleteSleep(int sleepID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Diapers
-                        .Single(e => e.ID == diaperID && e.ParentID == _userID);
+                        .Sleeps
+                        .Single(e => e.ID == sleepID && e.ParentID == _userID);
 
-                ctx.Diapers.Remove(entity);
+                ctx.Sleeps.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

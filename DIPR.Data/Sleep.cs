@@ -21,11 +21,15 @@ namespace DIPR.Data
 
         [Required]
         [Display(Name ="Sleep Starting Time")]
-        public TimeSpan SleepStart { get; set; }
+        //[DataType(DataType.Time)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        public DateTime SleepStart { get; set; }
 
         [Required]
         [Display(Name ="Sleep End Time")]
-        public TimeSpan SleepEnd { get; set; }
+        //[DataType(DataType.Time)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        public DateTime SleepEnd { get; set; }
 
         [Display(Name ="Total Time Slept")]
         public TimeSpan TotalSleep { get => SleepEnd - SleepStart; }
