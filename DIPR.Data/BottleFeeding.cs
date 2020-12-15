@@ -14,6 +14,9 @@ namespace DIPR.Data
         public int ID { get; set; }
 
         [Required]
+        public Guid ParentID { get; set; }
+
+        [Required]
         public DateTime Time { get; set; }
 
         [Required]

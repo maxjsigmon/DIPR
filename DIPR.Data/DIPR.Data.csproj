@@ -66,15 +66,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DIPR.Models\DIPR.Models.csproj">
-      <Project>{93ea6a3b-5706-4fc2-b4e0-8bef8e28770e}</Project>
-      <Name>DIPR.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DIPR.Services\DIPR.Services.csproj">
-      <Project>{839a5694-49a3-4631-897e-171e92bbb7e6}</Project>
-      <Name>DIPR.Services</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

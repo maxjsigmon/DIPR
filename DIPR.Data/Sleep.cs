@@ -12,10 +12,23 @@ namespace DIPR.Data
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
+        public Guid ParentID { get; set; }
+
         [Required]
         public Location Location { get; set; }
+
         [Required]
-        public TimeSpan TimeSlept { get; set; }
+        [Display(Name ="Sleep Starting Time")]
+        public TimeSpan SleepStart { get; set; }
+
+        [Required]
+        [Display(Name ="Sleep End Time")]
+        public TimeSpan SleepEnd { get; set; }
+
+        [Display(Name ="Total Time Slept")]
+        public TimeSpan TotalSleep { get => SleepEnd - SleepStart; }
         public string Notes { get; set; }
 
         public int BabyID { get; set; }

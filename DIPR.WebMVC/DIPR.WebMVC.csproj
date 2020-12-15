@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,12 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BabyController.cs" />
+    <Compile Include="Controllers\DiaperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,6 +236,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Baby\Index.cshtml" />
+    <Content Include="Views\Baby\Create.cshtml" />
+    <Content Include="Views\Baby\Details.cshtml" />
+    <Content Include="Views\Baby\Delete.cshtml" />
+    <Content Include="Views\Diaper\Delete.cshtml" />
+    <Content Include="Views\Diaper\Index.cshtml" />
+    <Content Include="Views\Diaper\Create.cshtml" />
+    <Content Include="Views\Diaper\Details.cshtml" />
+    <Content Include="Views\Diaper\Edit.cshtml" />
+    <Content Include="Views\Baby\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +267,14 @@
     <ProjectReference Include="..\DIPR.Data\DIPR.Data.csproj">
       <Project>{adfa30d4-f312-4bf4-9aef-d24794dc7905}</Project>
       <Name>DIPR.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIPR.Models\DIPR.Models.csproj">
+      <Project>{93ea6a3b-5706-4fc2-b4e0-8bef8e28770e}</Project>
+      <Name>DIPR.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIPR.Services\DIPR.Services.csproj">
+      <Project>{839a5694-49a3-4631-897e-171e92bbb7e6}</Project>
+      <Name>DIPR.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

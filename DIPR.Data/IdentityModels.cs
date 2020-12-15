@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using DIPR.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -29,5 +30,8 @@ namespace DIPR.WebMVC.Data
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Baby> Babies { get; set; }
+        public DbSet<Diaper> Diapers { get; set; }
     }
 }
