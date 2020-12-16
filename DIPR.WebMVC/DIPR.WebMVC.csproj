@@ -173,6 +173,7 @@
     <Compile Include="Controllers\DiaperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NursingController.cs" />
     <Compile Include="Controllers\SleepController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -258,6 +259,11 @@
     <Content Include="Views\Bottle\Details.cshtml" />
     <Content Include="Views\Bottle\Edit.cshtml" />
     <Content Include="Views\Bottle\Delete.cshtml" />
+    <Content Include="Views\Nursing\Index.cshtml" />
+    <Content Include="Views\Nursing\Create.cshtml" />
+    <Content Include="Views\Nursing\Details.cshtml" />
+    <Content Include="Views\Nursing\Edit.cshtml" />
+    <Content Include="Views\Nursing\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

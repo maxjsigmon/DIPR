@@ -1,0 +1,40 @@
+﻿@model DIPR.Models.Nursing.NursingDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NursingDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NursingID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NursingID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeFed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeFed)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -23,7 +23,6 @@ namespace DIPR.Data
         public FeedingSide FeedingSide { get; set; }
         public string Notes { get; set; }
 
-        [Required]
         public int BabyID { get; set; }
 
         [ForeignKey(nameof(BabyID))]
