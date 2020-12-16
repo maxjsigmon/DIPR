@@ -35,7 +35,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Soiled, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EnumDropDownListFor(model => model.Soiled, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EnumDropDownListFor(model => model.Soiled, "--Select Soil Type--", new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.Soiled, "", new { @class = "text-danger" })
         </div>
     </div>

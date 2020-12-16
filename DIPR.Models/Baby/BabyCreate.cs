@@ -16,6 +16,7 @@ namespace DIPR.Models
         public string Name { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Gender")]
         public Gender Gender { get; set; }
 
         [Required]

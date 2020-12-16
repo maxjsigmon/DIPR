@@ -27,6 +27,7 @@ namespace DIPR.Models.Diaper
         public SelectList SoiledList { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Correct Soil Type")]
         public Soiled Soiled { get; set; }
         public string Notes { get; set; }
         public static SelectList GetSoiledSelectList()

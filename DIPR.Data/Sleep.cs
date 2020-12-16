@@ -43,9 +43,10 @@ namespace DIPR.Data
 
     public enum Location
     {
-        Crib,
+        Crib = 1,
         Bed,
         Bassinet,
+        [Display(Name = "Car Seat")]
         CarSeat,
         Carrier,
         Stroller,

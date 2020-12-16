@@ -32,8 +32,8 @@ namespace DIPR.Data
     }
     public enum Soiled
     {
-        Wet,
-        Dirty,
-        Both
+        Wet = 1,
+        Dirty = 2,
+        Both = 3
     }
 }

@@ -31,7 +31,7 @@ namespace DIPR.Data
 
     public enum FeedingSide
     {
-        Left,
-        Right
+        Left = 1,
+        Right = 2
     }
 }

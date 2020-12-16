@@ -14,6 +14,7 @@ namespace DIPR.Models.Sleep
         public int BabyID { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Sleeping Location")]
         public Location Location { get; set; }
 
         [Required]

@@ -19,6 +19,7 @@ namespace DIPR.Models.Nursing
         public decimal TimeFed { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Feeding Side")]
         public FeedingSide FeedingSide { get; set; }
 
         public string Notes { get; set; }
