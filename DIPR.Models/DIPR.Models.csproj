@@ -67,6 +67,10 @@
     <Compile Include="Baby\BabyDetail.cs" />
     <Compile Include="Baby\BabyEdit.cs" />
     <Compile Include="Baby\BabyListItem.cs" />
+    <Compile Include="Bottle\BottleCreate.cs" />
+    <Compile Include="Bottle\BottleDetail.cs" />
+    <Compile Include="Bottle\BottleEdit.cs" />
+    <Compile Include="Bottle\BottleListItem.cs" />
     <Compile Include="Diaper\DiaperCreate.cs" />
     <Compile Include="Diaper\DiaperDetails.cs" />
     <Compile Include="Diaper\DiaperEdit.cs" />
@@ -85,6 +89,9 @@
       <Project>{adfa30d4-f312-4bf4-9aef-d24794dc7905}</Project>
       <Name>DIPR.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Nursing\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
