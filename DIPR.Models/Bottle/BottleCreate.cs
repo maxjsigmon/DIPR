@@ -24,8 +24,10 @@ namespace DIPR.Models.Bottle
         public decimal Consumed { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage ="Select a Correct Content Type")]
         public Contents Contents { get; set; }
         public string Notes { get; set; }
+        public string Name { get; set; }
 
         public BottleCreate()
         {

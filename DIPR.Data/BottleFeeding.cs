@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -29,7 +30,6 @@ namespace DIPR.Data
         public Contents Contents { get; set; }
         public string Notes { get; set; }
 
-        [Required]
         public int BabyID { get; set; }
 
         [ForeignKey(nameof(BabyID))]
@@ -39,9 +39,10 @@ namespace DIPR.Data
 
     public enum Contents
     {
-        BreastMilk,
-        Formula,
-        Milk,
-        Water
+        [Display(Name="Breast Milk")]
+        BreastMilk = 1,
+        Formula = 2,
+        Milk = 3,
+        Water = 4
     }
 }

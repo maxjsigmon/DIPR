@@ -253,10 +253,14 @@
     <Content Include="Views\Sleep\Edit.cshtml" />
     <Content Include="Views\Sleep\Delete.cshtml" />
     <Content Include="Views\Sleep\Details.cshtml" />
+    <Content Include="Views\Bottle\Index.cshtml" />
+    <Content Include="Views\Bottle\Create.cshtml" />
+    <Content Include="Views\Bottle\Details.cshtml" />
+    <Content Include="Views\Bottle\Edit.cshtml" />
+    <Content Include="Views\Bottle\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Bottle\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
