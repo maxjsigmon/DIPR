@@ -66,6 +66,10 @@
     <Compile Include="Migrations\202012161439454_added-bottlefeeding.Designer.cs">
       <DependentUpon>202012161439454_added-bottlefeeding.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012161557448_updated-listitem.cs" />
+    <Compile Include="Migrations\202012161557448_updated-listitem.Designer.cs">
+      <DependentUpon>202012161557448_updated-listitem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012161439454_added-bottlefeeding.resx">
       <DependentUpon>202012161439454_added-bottlefeeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012161557448_updated-listitem.resx">
+      <DependentUpon>202012161557448_updated-listitem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
