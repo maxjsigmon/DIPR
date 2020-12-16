@@ -17,16 +17,12 @@ namespace DIPR.Data
         public Guid ParentID { get; set; }
 
         [Required]
-        public DateTime StartTime { get; set; }
-
-        [Required]
-        public DateTime EndTime { get; set; }
+        public decimal TimeFed { get; set; }
 
         [Required]
         public FeedingSide FeedingSide { get; set; }
         public string Notes { get; set; }
 
-        [Required]
         public int BabyID { get; set; }
 
         [ForeignKey(nameof(BabyID))]
