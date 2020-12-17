@@ -5,11 +5,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace DIPR.Models.Bottle
 {
     public class BottleEdit
     {
+        
+        public int BabyID { get; set; }
         public int BottleID { get; set; }
         public DateTime Time { get; set; }
         public decimal Quantity { get; set; }
@@ -18,5 +21,6 @@ namespace DIPR.Models.Bottle
         [Range(1, int.MaxValue, ErrorMessage = "Select a Correct Content Type")]
         public Contents Contents { get; set; }
         public string Notes { get; set; }
+        public SelectList Babies { get; set; }
     }
 }

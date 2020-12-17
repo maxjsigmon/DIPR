@@ -12,5 +12,9 @@ namespace DIPR.Models.Bottle
         public int BottleID { get; set; }
         public DateTime Time { get; set; }
         public Contents Contents { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal Consumed { get; set; }
+        public string Notes { get; set; }
+
     }
 }

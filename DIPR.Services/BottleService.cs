@@ -94,6 +94,7 @@ namespace DIPR.Services
                 entity.Quantity = model.Quantity;
                 entity.Consumed = model.Consumed;
                 entity.Notes = model.Notes;
+                entity.BabyID = model.BabyID;
 
                 return ctx.SaveChanges() == 1;
             }
