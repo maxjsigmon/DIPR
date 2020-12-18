@@ -21,5 +21,7 @@ namespace DIPR.Models.Nursing
         [Display(Name ="Left or Right Side")]
         public  FeedingSide FeedingSide { get; set; }
         public string Notes { get; set; }
+        public int BabyID { get; set; }
+
     }
 }

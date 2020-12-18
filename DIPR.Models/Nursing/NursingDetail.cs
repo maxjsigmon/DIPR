@@ -10,6 +10,8 @@ namespace DIPR.Models.Nursing
 {
     public class NursingDetail
     {
+        public int BabyID { get; set; }
+
         [Display(Name = "Nursing ID #:")]
         public int NursingID { get; set; }
 

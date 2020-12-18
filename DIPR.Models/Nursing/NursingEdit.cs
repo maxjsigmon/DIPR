@@ -29,5 +29,8 @@ namespace DIPR.Models.Nursing
 
         [Display(Name = "Baby:")]
         public SelectList Babies { get; set; }
+
+        public string Name { get; set; }
+
     }
 }

@@ -53,6 +53,7 @@ namespace DIPR.Services
                                     TimeFed = e.TimeFed,
                                     FeedingSide = e.FeedingSide,
                                     Notes = e.Notes,
+                                    BabyID = e.BabyID
                                 }
                                 );
                 return query.ToArray();
@@ -73,7 +74,9 @@ namespace DIPR.Services
                         NursingID = entity.ID,
                         TimeFed = entity.TimeFed,
                         FeedingSide = entity.FeedingSide,
-                        Notes = entity.Notes
+                        Notes = entity.Notes,
+                        BabyID = entity.BabyID
+                        
                     };
             }
         }
@@ -87,10 +90,12 @@ namespace DIPR.Services
                         .Nursings
                         .Single(e => e.ID == model.NursingID && e.ParentID == _userID);
                 entity.TimeFed = model.TimeFed;
+                entity.Name = model.Name;
                 entity.FeedingSide = model.FeedingSide;
                 entity.Notes = model.Notes;
                 entity.BabyID = model.BabyID;
-
+                
+               
                 return ctx.SaveChanges() == 1;
             }
         }
