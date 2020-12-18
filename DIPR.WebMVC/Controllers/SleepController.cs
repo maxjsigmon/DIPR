@@ -60,7 +60,12 @@ namespace DIPR.WebMVC.Controllers
             var model =
                 new SleepEdit
                 {
-                    SleepID = detail.SleepID
+                    SleepID = detail.SleepID,
+                    Location = detail.Location,
+                    SleepStart = detail.SleepStart,
+                    SleepEnd = detail.SleepEnd,
+                    Notes=  detail.Notes
+
                    
                 };
             return View(model);
@@ -116,6 +121,13 @@ namespace DIPR.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new SleepService(userId);
+            return service;
+        }
+
+        private BabyService CreateBabyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BabyService(userId);
             return service;
         }
     }

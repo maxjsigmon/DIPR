@@ -117,5 +117,12 @@ namespace DIPR.WebMVC.Controllers
             var service = new NursingService(userId);
             return service;
         }
+
+        private BabyService CreateBabyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BabyService(userId);
+            return service;
+        }
     }
 }

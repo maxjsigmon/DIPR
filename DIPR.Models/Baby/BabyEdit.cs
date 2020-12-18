@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIPR.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace DIPR.Models.Baby
         public string Name { get; set; }
         public DateTime BirthDate { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "Select a Correct Content Type")]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Gender")]
         public Gender Gender { get; set; }
         public string Notes { get; set; }
         

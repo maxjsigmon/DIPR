@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIPR.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,10 +19,5 @@ namespace DIPR.Models.Baby
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
         public string Notes { get; set; }
-    }
-    public enum Gender
-    {
-        Boy,
-        Girl
     }
 }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Gender = DIPR.Models.Baby.Gender;
+
 
 namespace DIPR.Services
 {
@@ -27,7 +27,7 @@ namespace DIPR.Services
                 {
                     ParentID = _userID,
                     Name = model.Name,
-                    Gender = (Data.Gender)model.Gender,
+                    Gender = model.Gender,
                     BirthDate = model.BirthDate,
                     Notes = model.Notes
 
@@ -54,7 +54,7 @@ namespace DIPR.Services
                                 {
                                     BabyID = e.ID,
                                     Name = e.Name,
-                                    Gender = (Gender)e.Gender,
+                                    Gender = e.Gender,
                                     BirthDate = e.BirthDate,
                                     Notes = e.Notes
                                 }
@@ -74,8 +74,11 @@ namespace DIPR.Services
                 return
                     new BabyDetail
                     {
-                        BabyId = entity.ID,
-                        Name = entity.Name
+                        BabyID = entity.ID,
+                        Name = entity.Name,
+                        Gender = entity.Gender,
+                        BirthDate = entity.BirthDate,
+                        Notes = entity.Notes
                     };
             }
         }
@@ -89,7 +92,7 @@ namespace DIPR.Services
                         .Babies
                         .Single(e => e.ID == model.BabyID && e.ParentID == _userID);
                 entity.Name = model.Name;
-                entity.Gender = (Data.Gender)model.Gender;
+                entity.Gender = model.Gender;
                 entity.Notes = model.Notes;
                 entity.BirthDate = model.BirthDate;
 

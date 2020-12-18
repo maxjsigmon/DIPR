@@ -16,13 +16,9 @@ namespace DIPR.Models.Sleep
         public Location Location { get; set; }
 
         [Display(Name = "Sleep Starting Time")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]DataFormatString = "0:H: mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Display(Name = "Sleep End Time")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
         [Display(Name = "Total Time Slept")]

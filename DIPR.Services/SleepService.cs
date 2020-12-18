@@ -61,7 +61,7 @@ namespace DIPR.Services
                 return query.ToArray();
             }
         }
-        public SleepDetail GetSleepById(int id)
+        public SleepListItem GetSleepById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -70,10 +70,14 @@ namespace DIPR.Services
                         .Sleeps
                         .Single(e => e.ID == id && e.ParentID == _userID);
                 return
-                    new SleepDetail
+                    new SleepListItem
                     {
                         SleepID = entity.ID,
-                        TotalSleep = entity.TotalSleep
+                        Location = entity.Location,
+                        SleepStart = entity.SleepStart,
+                        SleepEnd = entity.SleepEnd,
+                        Notes = entity.Notes
+
                     };
             }
         }

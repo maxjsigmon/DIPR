@@ -33,6 +33,13 @@ namespace DIPR.WebMVC.Controllers
             if (!ModelState.IsValid) return View(model);
 
             var service = CreateBottleService();
+            var babyService = CreateBabyService();
+            var babies = babyService.GetBaby()
+                .Select(x => new
+                {
+                    Text = x.Name,
+                    Value = x.BabyID
+                });
 
             if (service.CreateBottle(model))
             {
@@ -53,19 +60,36 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET
+
         public ActionResult Edit(int id)
         {
             var service = CreateBottleService();
+            var babyService = CreateBabyService();
             var detail = service.GetBottleById(id);
+            var babies = babyService.GetBaby()
+                .Select(x => new
+                {
+                    Text = x.Name,
+                    Value = x.BabyID
+                });
+
             var model =
                 new BottleEdit
                 {
                     BottleID = detail.BottleID,
-                    Time = detail.Time
+                    Time = detail.Time,
+                    Contents = detail.Contents,
+                    Quantity = detail.Quantity,
+                    Consumed = detail.Consumed,
+                    Notes = detail.Notes,
+                    Babies = new SelectList(babies, "Value", "Text")
+                    
                 };
             return View(model);
         }
 
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, BottleEdit model)
@@ -115,6 +139,13 @@ namespace DIPR.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new BottleService(userId);
+            return service;
+        }
+
+        private BabyService CreateBabyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BabyService(userId);
             return service;
         }
     }
