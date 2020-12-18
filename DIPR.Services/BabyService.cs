@@ -95,6 +95,7 @@ namespace DIPR.Services
                 entity.Gender = model.Gender;
                 entity.Notes = model.Notes;
                 entity.BirthDate = model.BirthDate;
+                entity.ID = model.BabyID;
 
                 return ctx.SaveChanges() == 1;
             }

@@ -69,9 +69,11 @@ namespace DIPR.WebMVC.Controllers
                 {
                     NursingID = detail.NursingID,
                     TimeFed = detail.TimeFed,
+                    Name = detail.Name,
                     FeedingSide = detail.FeedingSide,
                     Notes = detail.Notes,
-                    Babies = new SelectList(babies, "Value", "Text")
+                    Babies = new SelectList(babies, "Value", "Text"),
+                    //BabyID = detail.BabyID
                 };
             return View(model);
         }

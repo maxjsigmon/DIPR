@@ -99,6 +99,10 @@
     <Compile Include="Migrations\202012181543442_undo-create.Designer.cs">
       <DependentUpon>202012181543442_undo-create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012181928111_update-nursing-props.cs" />
+    <Compile Include="Migrations\202012181928111_update-nursing-props.Designer.cs">
+      <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012181543442_undo-create.resx">
       <DependentUpon>202012181543442_undo-create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012181928111_update-nursing-props.resx">
+      <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

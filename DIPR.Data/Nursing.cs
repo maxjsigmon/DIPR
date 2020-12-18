@@ -19,6 +19,8 @@ namespace DIPR.Data
         [Required]
         public decimal TimeFed { get; set; }
 
+        public string Name { get; set; }
+
         [Required]
         public FeedingSide FeedingSide { get; set; }
         public string Notes { get; set; }

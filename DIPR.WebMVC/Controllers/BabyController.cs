@@ -82,11 +82,11 @@ namespace DIPR.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.BabyID != id)
-            {
-                ModelState.AddModelError("", "ID Mismatch");
-                return View(model);
-            }
+            //if (model.BabyID != id)
+            //{
+            //    ModelState.AddModelError("", "ID Mismatch");
+            //    return View(model);
+            //}
             var service = CreateBabyService();
 
             if (service.UpdateBaby(model))
