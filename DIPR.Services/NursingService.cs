@@ -72,6 +72,8 @@ namespace DIPR.Services
                     {
                         NursingID = entity.ID,
                         TimeFed = entity.TimeFed,
+                        FeedingSide = entity.FeedingSide,
+                        Notes = entity.Notes
                     };
             }
         }

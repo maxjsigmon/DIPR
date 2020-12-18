@@ -67,8 +67,11 @@ namespace DIPR.WebMVC.Controllers
             var model =
                 new BabyEdit
                 {
-                    BabyID = detail.BabyId,
-                    Name = detail.Name
+                    BabyID = detail.BabyID,
+                    Name = detail.Name,
+                    BirthDate = detail.BirthDate,
+                    Gender = detail.Gender,
+                    Notes = detail.Notes
                 };
             return View(model);
         }

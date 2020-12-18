@@ -56,12 +56,24 @@ namespace DIPR.WebMVC.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateDiaperService();
+            var babyService = CreateBabyService();
             var detail = service.GetDiaperById(id);
+            var babies = babyService.GetBaby()
+               .Select(x => new
+               {
+                   Text = x.Name,
+                   Value = x.BabyID
+               });
             var model =
                 new DiaperEdit
                 {
+                    BabyID = detail.BabyID,
                     DiaperID = detail.DiaperID,
-                    Time = detail.Time
+                    Time = detail.Time,
+                    Soiled = detail.Soiled,
+                    Notes = detail.Notes,
+                    Babies = new SelectList(babies, "Value", "Text")
+                    
                 };
             return View(model);
         }
@@ -115,6 +127,13 @@ namespace DIPR.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DiaperService(userId);
+            return service;
+        }
+
+        private BabyService CreateBabyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BabyService(userId);
             return service;
         }
     }

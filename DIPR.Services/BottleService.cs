@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace DIPR.Services
 {
@@ -30,7 +31,6 @@ namespace DIPR.Services
                     Consumed = model.Consumed,
                     Notes = model.Notes
                 };
-
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Bottles.Add(entity);
@@ -76,7 +76,11 @@ namespace DIPR.Services
                     {
                         BottleID = entity.ID,
                         Time = entity.Time,
-                        Contents = entity.Contents
+                        Contents = entity.Contents,
+                        Quantity = entity.Quantity,
+                        Consumed = entity.Consumed,
+                        Notes = entity.Notes
+                        
                     };
             }
         }

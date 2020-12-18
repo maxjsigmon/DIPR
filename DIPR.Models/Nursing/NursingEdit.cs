@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace DIPR.Models.Nursing
 {
@@ -16,5 +17,6 @@ namespace DIPR.Models.Nursing
         [Range(1, int.MaxValue, ErrorMessage = "Select a Feeding Side")]
         public FeedingSide FeedingSide { get; set; }
         public string Notes { get; set; }
+        public SelectList Babies { get; set; }
     }
 }

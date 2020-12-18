@@ -71,7 +71,9 @@ namespace DIPR.Services
                     new DiaperDetails
                     {
                         DiaperID = entity.ID,
-                        Time = entity.Time
+                        Time = entity.Time,
+                        Soiled = entity.Soiled,
+                        Notes = entity.Notes
                     };
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIPR.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,11 @@ namespace DIPR.Models.Diaper
 {
     public class DiaperDetails
     {
+        public int BabyID { get; set; }
         public int DiaperID { get; set; }
+        public string Name { get; set; }
         public DateTime Time { get; set; }
-
+        public Soiled Soiled { get; set; }
+        public string Notes { get; set; }
     }
 }

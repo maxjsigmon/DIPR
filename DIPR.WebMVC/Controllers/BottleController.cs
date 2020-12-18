@@ -33,6 +33,13 @@ namespace DIPR.WebMVC.Controllers
             if (!ModelState.IsValid) return View(model);
 
             var service = CreateBottleService();
+            var babyService = CreateBabyService();
+            var babies = babyService.GetBaby()
+                .Select(x => new
+                {
+                    Text = x.Name,
+                    Value = x.BabyID
+                });
 
             if (service.CreateBottle(model))
             {
@@ -72,6 +79,7 @@ namespace DIPR.WebMVC.Controllers
                 {
                     BottleID = detail.BottleID,
                     Time = detail.Time,
+                    Contents = detail.Contents,
                     Quantity = detail.Quantity,
                     Consumed = detail.Consumed,
                     Notes = detail.Notes,
