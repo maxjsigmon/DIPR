@@ -28,7 +28,7 @@ namespace DIPR.Services
                     Location = model.Location,
                     SleepStart = model.SleepStart,
                     SleepEnd = model.SleepEnd,
-                    Notes = model.Notes
+                    Notes = model.Notes,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -61,7 +61,7 @@ namespace DIPR.Services
                 return query.ToArray();
             }
         }
-        public SleepListItem GetSleepById(int id)
+        public SleepDetail GetSleepById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -70,14 +70,13 @@ namespace DIPR.Services
                         .Sleeps
                         .Single(e => e.ID == id && e.ParentID == _userID);
                 return
-                    new SleepListItem
+                    new SleepDetail
                     {
                         SleepID = entity.ID,
                         Location = entity.Location,
                         SleepStart = entity.SleepStart,
                         SleepEnd = entity.SleepEnd,
                         Notes = entity.Notes
-
                     };
             }
         }
@@ -94,6 +93,7 @@ namespace DIPR.Services
                 entity.SleepStart = model.SleepStart;
                 entity.SleepEnd = model.SleepEnd;
                 entity.Notes = model.Notes;
+                entity.BabyID = model.BabyID;
 
                 return ctx.SaveChanges() == 1;
             }

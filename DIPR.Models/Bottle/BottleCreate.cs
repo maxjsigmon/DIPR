@@ -15,19 +15,29 @@ namespace DIPR.Models.Bottle
         public int BabyID { get; set; }
 
         [Required]
+        [Display(Name = "Time:")]
         public DateTime Time { get; set; }
 
         [Required]
+        [Display(Name = "Quantity:")]
         public decimal Quantity { get; set; }
 
         [Required]
+        [Display(Name = "Consumed:")]
         public decimal Consumed { get; set; }
 
         [Required]
         [Range(1, int.MaxValue, ErrorMessage ="Select a Content Type")]
+        [Display(Name = "Contents:")]
         public Contents Contents { get; set; }
+
+        [Display(Name = "Notes:")]
         public string Notes { get; set; }
+
         public string Name { get; set; }
+
+        [Display(Name = "Baby:")]
+        public SelectList Babies { get; set; }
 
         public BottleCreate()
         {

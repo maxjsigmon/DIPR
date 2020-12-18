@@ -11,24 +11,27 @@ namespace DIPR.Models.Sleep
 {
     public class SleepCreate
     {
+        [Display(Name = "Baby ID #:")]
         public int BabyID { get; set; }
 
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Select a Sleeping Location")]
+        [Display(Name = "Location:")]
         public Location Location { get; set; }
 
         [Required]
-        [Display(Name = "Sleep Starting Time")]
+        [Display(Name = "Sleep Starting Time:")]
         //[DataType(DataType.Time)]
         //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Required]
-        [Display(Name = "Sleep End Time")]
+        [Display(Name = "Sleep End Time:")]
         //[DataType(DataType.Time)]
         //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
+        [Display(Name = "Notes:")]
         public string Notes { get; set; }
 
         public SleepCreate()

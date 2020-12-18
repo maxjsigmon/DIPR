@@ -11,17 +11,22 @@ namespace DIPR.Models.Sleep
 {
    public class SleepEdit
     {
-        public int SleepID { get; set; }
+        [Display(Name = "Baby ID #:")]
+        public int BabyID { get; set; }
 
+        [Display(Name="Sleep ID #:")]
+        public int SleepID { get; set; }
+        [Display(Name = "Location:")]
         [Range(1, int.MaxValue, ErrorMessage = "Select a Sleeping Location")]
         public Location Location { get; set; }
 
-        [Display(Name = "Sleep Starting Time")]
+        [Display(Name = "Sleep Starting Time:")]
         public DateTime SleepStart { get; set; }
 
-        [Display(Name = "Sleep End Time")]
+        [Display(Name = "Sleep End Time:")]
         public DateTime SleepEnd { get; set; }
         public string Notes { get; set; }
+        [Display(Name ="Baby:")]
         public SelectList Babies { get; set; }
     }
 }

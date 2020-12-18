@@ -89,6 +89,7 @@ namespace DIPR.Services
                 entity.TimeFed = model.TimeFed;
                 entity.FeedingSide = model.FeedingSide;
                 entity.Notes = model.Notes;
+                entity.BabyID = model.BabyID;
 
                 return ctx.SaveChanges() == 1;
             }

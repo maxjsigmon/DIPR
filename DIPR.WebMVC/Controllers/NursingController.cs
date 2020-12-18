@@ -56,12 +56,22 @@ namespace DIPR.WebMVC.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateNursingService();
+            var babyService = CreateBabyService();
             var detail = service.GetNursingDataById(id);
+            var babies = babyService.GetBaby()
+               .Select(x => new
+               {
+                   Text = x.Name,
+                   Value = x.BabyID
+               });
             var model =
                 new NursingEdit
                 {
                     NursingID = detail.NursingID,
-                    TimeFed = detail.TimeFed
+                    TimeFed = detail.TimeFed,
+                    FeedingSide = detail.FeedingSide,
+                    Notes = detail.Notes,
+                    Babies = new SelectList(babies, "Value", "Text")
                 };
             return View(model);
         }
