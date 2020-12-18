@@ -11,6 +11,7 @@ namespace DIPR.Models.Sleep
    public class SleepListItem
     {
         [Key]
+        [Display(Name = "Sleep ID #")]
         public int SleepID { get; set; }
 
         public Location Location { get; set; }

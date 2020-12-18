@@ -11,6 +11,7 @@ namespace DIPR.Models.Bottle
     public class BottleListItem
     {
         [Key]
+        [Display(Name = "Bottle ID #")]
         public int BottleID { get; set; }
         public string Name { get; set; }
         public DateTime Time { get; set; }

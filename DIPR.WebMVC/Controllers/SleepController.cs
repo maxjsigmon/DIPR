@@ -56,7 +56,15 @@ namespace DIPR.WebMVC.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateSleepService();
+            var babyService = CreateBabyService();
             var detail = service.GetSleepById(id);
+            var babies = babyService.GetBaby()
+               .Select(x => new
+               {
+                   Text = x.Name,
+                   Value = x.BabyID
+               });
+
             var model =
                 new SleepEdit
                 {
@@ -64,9 +72,9 @@ namespace DIPR.WebMVC.Controllers
                     Location = detail.Location,
                     SleepStart = detail.SleepStart,
                     SleepEnd = detail.SleepEnd,
-                    Notes=  detail.Notes
+                    Notes=  detail.Notes,
+                    Babies = new SelectList(babies, "Value", "Text")
 
-                   
                 };
             return View(model);
         }

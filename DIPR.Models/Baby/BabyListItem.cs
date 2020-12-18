@@ -11,6 +11,7 @@ namespace DIPR.Models.Baby
    public class BabyListItem
     {
         [Key]
+        [Display(Name = "Baby ID #")]
         public int BabyID { get; set; }
         public string Name { get; set; }
         public Gender Gender { get; set; }

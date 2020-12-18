@@ -11,6 +11,7 @@ namespace DIPR.Models.Nursing
     public class NursingListItem
     {
         [Key]
+        [Display(Name = "Nursing ID #")]
         public int NursingID { get; set; }
         public string Name { get; set; }
 
