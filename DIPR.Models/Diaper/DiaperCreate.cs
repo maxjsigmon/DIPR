@@ -29,6 +29,7 @@ namespace DIPR.Models.Diaper
         public Soiled Soiled { get; set; }
 
         [Display(Name = "Notes:")]
+        [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
         public DiaperCreate()
         {

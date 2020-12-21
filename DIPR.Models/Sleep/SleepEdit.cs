@@ -25,6 +25,9 @@ namespace DIPR.Models.Sleep
 
         [Display(Name = "Sleep End Time:")]
         public DateTime SleepEnd { get; set; }
+
+        [Display(Name ="Notes:")]
+        [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
         [Display(Name ="Baby:")]
         public SelectList Babies { get; set; }

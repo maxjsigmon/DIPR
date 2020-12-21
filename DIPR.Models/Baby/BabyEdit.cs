@@ -22,6 +22,7 @@ namespace DIPR.Models.Baby
         [Display(Name = "Gender:")]
         public Gender Gender { get; set; }
 
+        [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         [Display(Name = "Notes:")]
         public string Notes { get; set; }
         
