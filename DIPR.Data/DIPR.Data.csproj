@@ -111,6 +111,10 @@
     <Compile Include="Migrations\202101041732239_update-diaper-class.Designer.cs">
       <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101042126493_user-update.cs" />
+    <Compile Include="Migrations\202101042126493_user-update.Designer.cs">
+      <DependentUpon>202101042126493_user-update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101041732239_update-diaper-class.resx">
       <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101042126493_user-update.resx">
+      <DependentUpon>202101042126493_user-update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
