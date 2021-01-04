@@ -103,6 +103,14 @@
     <Compile Include="Migrations\202012181928111_update-nursing-props.Designer.cs">
       <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101041600480_name-property.cs" />
+    <Compile Include="Migrations\202101041600480_name-property.Designer.cs">
+      <DependentUpon>202101041600480_name-property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101041732239_update-diaper-class.cs" />
+    <Compile Include="Migrations\202101041732239_update-diaper-class.Designer.cs">
+      <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012181928111_update-nursing-props.resx">
       <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101041600480_name-property.resx">
+      <DependentUpon>202101041600480_name-property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101041732239_update-diaper-class.resx">
+      <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

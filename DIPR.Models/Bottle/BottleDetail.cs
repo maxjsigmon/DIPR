@@ -28,5 +28,7 @@ namespace DIPR.Models.Bottle
         [Display(Name = "Notes:")]
         public string Notes { get; set; }
 
+        public int BabyID { get; set; }
+
     }
 }

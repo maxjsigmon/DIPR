@@ -15,9 +15,6 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DiaperID)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Time)
         </th>
 
@@ -28,16 +25,15 @@
         <th>
             @Html.DisplayNameFor(model => model.Notes)
         </th>
-        <th></th>
+        <th>
+            <p>Actions</p>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
 <tr>
     <td>
         @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DiaperID)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Time)

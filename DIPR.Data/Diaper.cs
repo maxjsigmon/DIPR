@@ -27,8 +27,14 @@ namespace DIPR.Data
         [Required]
         public int BabyID { get; set; }
 
+        public string Name { get; set; }
+
         [ForeignKey(nameof(BabyID))]
         public virtual Baby Baby { get; set; }
+
+        //[ForeignKey(nameof(Baby))]
+        //public int BabyId { get; set; }
+
     }
     public enum Soiled
     {

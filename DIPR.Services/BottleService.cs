@@ -25,6 +25,7 @@ namespace DIPR.Services
                 {
                     ParentID = _userID,
                     BabyID = model.BabyID,
+                    Name = model.Name,
                     Time = model.Time,
                     Contents = model.Contents,
                     Quantity = model.Quantity,
@@ -50,13 +51,14 @@ namespace DIPR.Services
                             e =>
                                 new BottleListItem
                                 {
+                                    
                                     Name = e.Baby.Name,
                                     BottleID = e.ID,
                                     Time = e.Time,
                                     Contents = e.Contents,
                                     Quantity = e.Quantity,
                                     Consumed = e.Consumed,
-                                    Notes = e.Notes
+                                    Notes = e.Notes        
                                 }
                                 );
                 return query.ToArray();
@@ -74,13 +76,13 @@ namespace DIPR.Services
                 return
                     new BottleDetail
                     {
+                        BabyID = entity.BabyID,
                         BottleID = entity.ID,
                         Time = entity.Time,
                         Contents = entity.Contents,
                         Quantity = entity.Quantity,
                         Consumed = entity.Consumed,
                         Notes = entity.Notes
-                        
                     };
             }
         }

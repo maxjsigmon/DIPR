@@ -6,21 +6,25 @@
 
 <h2>Babies</h2>
 
-<p>
-    @Html.ActionLink("Add a Baby", "Create")
-</p>
-<p>
-    @Html.ActionLink("Add a Diaper", "Create", "Diaper")
-</p>
-<p>
-    @Html.ActionLink("Add Sleep Data", "Create", "Sleep")
-</p>
-<p>
-    @Html.ActionLink("Add a Bottle", "Create", "Bottle")
-</p>
-<p>
-    @Html.ActionLink("Add Nursing Data", "Create", "Nursing")
-</p>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1">Add Data</a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group">
+                <li class="list-group-item">@Html.ActionLink("Add a Baby", "Create")</li>
+                <li class="list-group-item"> @Html.ActionLink("Add a Diaper", "Create", "Diaper")</li>
+                <li class="list-group-item"> @Html.ActionLink("Add Sleep Data", "Create", "Sleep")</li>
+                <li class="list-group-item">@Html.ActionLink("Add a Bottle", "Create", "Bottle") </li>
+                <li class="list-group-item">@Html.ActionLink("Add Nursing Data", "Create", "Nursing") </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <table class="table">
     <tr>
         <th>
@@ -37,7 +41,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Notes)
         </th>
-        <th></th>
+        <th>
+            <p>Actions</p>
+        </th>
     </tr>
 
     @foreach (var item in Model)

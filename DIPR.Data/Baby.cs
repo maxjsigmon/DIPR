@@ -33,7 +33,7 @@ namespace DIPR.Data
 
     public enum Gender
     {
-        Boy,
-        Girl
+        Boy = 1,
+        Girl = 2
     }
 }

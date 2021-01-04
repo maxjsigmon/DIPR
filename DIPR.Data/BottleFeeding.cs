@@ -31,6 +31,8 @@ namespace DIPR.Data
         public Contents Contents { get; set; }
         public string Notes { get; set; }
 
+        public string Name { get; set; }
+
         public int BabyID { get; set; }
 
         [ForeignKey(nameof(BabyID))]
