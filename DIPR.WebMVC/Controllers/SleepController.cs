@@ -68,6 +68,7 @@ namespace DIPR.WebMVC.Controllers
             var model =
                 new SleepEdit
                 {
+                    BabyID = detail.BabyID,
                     SleepID = detail.SleepID,
                     Location = detail.Location,
                     SleepStart = detail.SleepStart,

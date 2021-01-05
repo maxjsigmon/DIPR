@@ -70,6 +70,7 @@ namespace DIPR.Services
                 return
                     new DiaperDetails
                     {
+                        BabyID = entity.BabyID,
                         DiaperID = entity.ID,
                         Time = entity.Time,
                         Soiled = entity.Soiled,
@@ -89,6 +90,7 @@ namespace DIPR.Services
                 entity.Soiled = model.Soiled;
                 entity.Time = model.Time;
                 entity.Notes = model.Notes;
+                entity.BabyID = model.BabyID;
                 
                 return ctx.SaveChanges() == 1;
             }

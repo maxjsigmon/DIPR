@@ -27,5 +27,7 @@ namespace DIPR.Models.Sleep
 
         [Display(Name = "Notes:")]
         public string Notes { get; set; }
+
+        public int BabyID { get; set; }
     }
 }

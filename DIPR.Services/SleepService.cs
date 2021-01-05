@@ -72,11 +72,13 @@ namespace DIPR.Services
                 return
                     new SleepDetail
                     {
+                        BabyID = entity.BabyID,
                         SleepID = entity.ID,
                         Location = entity.Location,
                         SleepStart = entity.SleepStart,
                         SleepEnd = entity.SleepEnd,
                         Notes = entity.Notes
+                        
                     };
             }
         }

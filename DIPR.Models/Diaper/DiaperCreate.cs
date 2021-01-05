@@ -14,8 +14,8 @@ namespace DIPR.Models.Diaper
         [Display(Name = "Baby ID #:")]
         public int BabyID { get; set; }
 
-        [Display(Name = "Name:")]
-        public string Name { get; set; }
+        //[Display(Name = "Name:")]
+        //public string Name { get; set; }
 
         [Required]
         [DataType(DataType.Time)]

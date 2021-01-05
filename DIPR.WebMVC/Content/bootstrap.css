@@ -1088,6 +1088,7 @@ body {
   color: #333333;
   background-color: #fff;
 }
+
 input,
 button,
 select,
@@ -1097,14 +1098,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
-  text-decoration: none;
+    color: #1D3557;
+    text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: #23527c;
-  text-decoration: underline;
-}
+    a:hover,
+    a:focus {
+        color: #E63946;
+        text-decoration: none;
+    }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -4665,27 +4666,46 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
+    background-color: #1D3557;
 }
-.navbar-inverse .navbar-brand {
-  color: #9d9d9d;
-}
+    .navbar-inverse .navbar-brand {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        overflow: hidden;
+        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+    }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #fff;
-  background-color: transparent;
+  background-position: 0 100%;
 }
 .navbar-inverse .navbar-text {
-  color: #9d9d9d;
+  color: white;
 }
-.navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        overflow: hidden;
+        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+    }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #fff;
-  background-color: transparent;
+  background-position: 0 100%;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -5032,11 +5052,14 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eeeeee;
+    margin-top: 1px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: transparent;
+    text-align: center;
+    border: 0px;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5322,12 +5345,12 @@ a.thumbnail.active {
   margin-bottom: 20px;
 }
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #A8DADC;
+    border: 1px solid #ddd;
 }
 .list-group-item:first-child {
   border-top-left-radius: 4px;
@@ -5527,7 +5550,7 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -5547,21 +5570,21 @@ button.list-group-item-danger.active:focus {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
-  color: inherit;
+  color: white;
 }
 .panel-title > a,
 .panel-title > small,
 .panel-title > .small,
 .panel-title > small > a,
 .panel-title > .small > a {
-  color: inherit;
+  color: white !important;
 }
 .panel-footer {
-  padding: 10px 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+    padding: 10px 15px;
+    background-color: #41803c;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
@@ -5761,10 +5784,12 @@ button.list-group-item-danger.active:focus {
 .panel-default {
   border-color: #ddd;
 }
+
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: #1D3557;
   border-color: #ddd;
+  color: white;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #ddd;

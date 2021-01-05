@@ -77,6 +77,7 @@ namespace DIPR.WebMVC.Controllers
             var model =
                 new BottleEdit
                 {
+                    BabyID = detail.BabyID,
                     BottleID = detail.BottleID,
                     Time = detail.Time,
                     Contents = detail.Contents,

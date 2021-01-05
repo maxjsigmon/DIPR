@@ -73,7 +73,7 @@ namespace DIPR.WebMVC.Controllers
                     FeedingSide = detail.FeedingSide,
                     Notes = detail.Notes,
                     Babies = new SelectList(babies, "Value", "Text"),
-                    //BabyID = detail.BabyID
+                    BabyID = detail.BabyID
                 };
             return View(model);
         }
