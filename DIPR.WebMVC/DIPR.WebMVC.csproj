@@ -185,7 +185,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\babybackground.png" />
+    <Content Include="Assets\green-paper-texture.jpg" />
+    <Content Include="Assets\greenbackground.jpg" />
+    <Content Include="Assets\greenstars.jpg" />
+    <Content Include="Assets\greenwallpaper.jpg" />
+    <Content Include="Assets\soft-wallpaper-texture.jpg" />
     <Content Include="Assets\stars.jpg" />
+    <Content Include="Assets\subtlewhite.jpg" />
+    <Content Include="Assets\Wood.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

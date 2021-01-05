@@ -1088,6 +1088,7 @@ body {
   color: #333333;
   background-color: #fff;
 }
+
 input,
 button,
 select,
@@ -1097,14 +1098,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: white;
-  text-decoration: none;
+    color: #1D3557;
+    text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: white;
-  text-decoration: underline;
-}
+    a:hover,
+    a:focus {
+        color: #E63946;
+        text-decoration: none;
+    }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -4665,22 +4666,22 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-    background-color: #41803C;
+    background-color: #1D3557;
 }
-.navbar-inverse .navbar-brand {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  overflow: hidden;
-  background: linear-gradient(to right, #001b74,  #001b74 50%, white 50%  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
-  text-decoration: none;
-}
+    .navbar-inverse .navbar-brand {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        overflow: hidden;
+        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+    }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   background-position: 0 100%;
@@ -4688,25 +4689,23 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-text {
   color: white;
 }
-.navbar-inverse .navbar-nav > li > a {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  overflow: hidden;
-  background: linear-gradient(to right, #001b74,  #001b74 50%, white 50%  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
-  text-decoration: none;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        overflow: hidden;
+        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+    }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   background-position: 0 100%;
-  /* color: #fff;
-  background-color: transparent; */
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -5058,9 +5057,9 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #41803c;
+    background-color: transparent;
     text-align: center;
-    border: 1px solid white;
+    border: 0px;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5350,7 +5349,7 @@ a.thumbnail.active {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #41803c;
+    background-color: #A8DADC;
     border: 1px solid #ddd;
 }
 .list-group-item:first-child {
@@ -5578,7 +5577,7 @@ button.list-group-item-danger.active:focus {
 .panel-title > .small,
 .panel-title > small > a,
 .panel-title > .small > a {
-  color: inherit;
+  color: white !important;
 }
 .panel-footer {
     padding: 10px 15px;
@@ -5785,9 +5784,10 @@ button.list-group-item-danger.active:focus {
 .panel-default {
   border-color: #ddd;
 }
+
 .panel-default > .panel-heading {
   color: #333333;
-  background-color:	#41803c;
+  background-color: #1D3557;
   border-color: #ddd;
   color: white;
 }
