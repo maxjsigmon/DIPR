@@ -1,26 +1,39 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+
+@{
     ViewBag.Title = "Home";
 }
 
 <div class="jumbotron">
     <h1>Welcome to DIPR</h1>
-    <p class="lead">....</p>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.</p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <div class="col-md-6">
+        <h2>Getting started with DIPR</h2>
         <p>
-           
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.
         </p>
-        
+        @if (!Request.IsAuthenticated)
+        {
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a></p>
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>
+
+        }
+        else
+        {
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Baby">See my Data</a></p>
+        }
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p></p>
+    <div class="col-md-6">
+        <h2>Baby 101</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.</p>
+        <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Home/About">Learn more</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p></p>
-    </div>
+    @*<div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p></p>
+        </div>*@
 </div>

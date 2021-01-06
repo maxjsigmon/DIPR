@@ -30,6 +30,8 @@ namespace DIPR.Models
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
 
+        public int BabyID { get; set; }
+
         public BabyCreate()
         {
             GenderList = GetGenderSelectList();

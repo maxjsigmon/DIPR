@@ -4673,7 +4673,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
         font-size: 25px;
         font-weight: bold;
         overflow: hidden;
-        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background: linear-gradient(to right, #fa394a,  #fa394a 50%, white 50% );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -4694,7 +4694,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
         font-size: 16px;
         font-weight: bold;
         overflow: hidden;
-        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background: linear-gradient(to right, #fa394a,  #fa394a 50%, white 50% );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -5058,7 +5058,6 @@ a.badge:focus {
     margin-bottom: 30px;
     color: inherit;
     background-color: transparent;
-    text-align: center;
     border: 0px;
 }
 .jumbotron h1,

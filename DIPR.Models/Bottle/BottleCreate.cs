@@ -39,10 +39,10 @@ namespace DIPR.Models.Bottle
 
         [Display(Name = "Baby:")]
         public SelectList Babies { get; set; }
-
+ 
         public BottleCreate()
         {
-            ContentsList = GetContentsSelectList();
+            ContentsList = GetContentsSelectList();         
         }
 
         public SelectList ContentsList { get; set; }
