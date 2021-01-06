@@ -5,7 +5,11 @@
 }
 
 <div class="jumbotron">
-    <h1>Welcome to DIPR</h1>
+    <h1>
+        <small class="text-muted">Welcome to</small>
+        DIPR
+    </h1>
+
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.</p>
 </div>
 
@@ -17,9 +21,8 @@
         </p>
         @if (!Request.IsAuthenticated)
         {
-            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a></p>
-            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>
-
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a></p> 
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>    
         }
         else
         {

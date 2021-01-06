@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background: url(../Assets/soft-wallpaper-texture.jpg) repeat;
+    font-family: 'Oxygen', sans-serif !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,3 +25,4 @@ select,
 textarea {
     max-width: 300px;
 }
+

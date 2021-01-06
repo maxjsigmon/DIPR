@@ -5,7 +5,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: 'Oxygen', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -2044,6 +2044,7 @@ pre code {
   }
   .col-md-6 {
     width: 50%;
+    font-size: 17px;
   }
   .col-md-5 {
     width: 41.66666667%;
@@ -2385,6 +2386,7 @@ th {
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  font-size: 15px;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -5084,7 +5086,7 @@ a.badge:focus {
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 0px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
@@ -5577,6 +5579,7 @@ button.list-group-item-danger.active:focus {
 .panel-title > small > a,
 .panel-title > .small > a {
   color: white !important;
+  font-size: 19px;
 }
 .panel-footer {
     padding: 10px 15px;
@@ -5759,6 +5762,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-group {
   margin-bottom: 20px;
+  width: 25%;
 }
 .panel-group .panel {
   margin-bottom: 0;
@@ -5773,6 +5777,8 @@ button.list-group-item-danger.active:focus {
 .panel-group .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse > .list-group {
   border-top: 1px solid #ddd;
+  font-size: 15px;
+  
 }
 .panel-group .panel-footer {
   border-top: 0;
