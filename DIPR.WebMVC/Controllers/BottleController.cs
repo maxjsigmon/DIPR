@@ -26,6 +26,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // POST : Create Bottle
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(BottleCreate model)
@@ -43,7 +44,7 @@ namespace DIPR.WebMVC.Controllers
 
             if (service.CreateBottle(model))
             {
-                TempData["SaveResult"] = "Your baby's bottle has been added!";
+               TempData["SaveResult"] = "Your baby's bottle has been added!";
                 return RedirectToAction("Index");
             };
 
@@ -52,6 +53,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Bottle Details by ID
         public ActionResult Details(int id)
         {
             var svc = CreateBottleService();
@@ -60,8 +62,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
-        // GET
-
+        // GET : Bottle Details by ID
         public ActionResult Edit(int id)
         {
             var service = CreateBottleService();
@@ -90,7 +91,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
-        
+        // Post : Edit Bottle Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, BottleEdit model)
@@ -114,6 +115,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // GET : Bottle by ID
         public ActionResult Delete(int id)
         {
             var svc = CreateBottleService();
@@ -122,6 +124,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Delete Bottle
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -26,6 +26,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // POST : Create Diaper Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(DiaperCreate model)
@@ -45,6 +46,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Diaper by ID
         public ActionResult Details(int id)
         {
             var svc = CreateDiaperService();
@@ -53,6 +55,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Diaper Data
         public ActionResult Edit(int id)
         {
             var service = CreateDiaperService();
@@ -78,6 +81,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Edit Diaper Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, DiaperEdit model)
@@ -101,6 +105,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        //GET : Diaper by ID
         public ActionResult Delete(int id)
         {
             var svc = CreateDiaperService();
@@ -109,6 +114,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Delete Diaper Data
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

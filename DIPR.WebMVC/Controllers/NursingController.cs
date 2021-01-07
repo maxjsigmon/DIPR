@@ -26,6 +26,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // POST : Create Nursing Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(NursingCreate model)
@@ -45,6 +46,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Nursing Data by ID
         public ActionResult Details(int id)
         {
             var svc = CreateNursingService();
@@ -53,6 +55,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Nursing Data
         public ActionResult Edit(int id)
         {
             var service = CreateNursingService();
@@ -78,6 +81,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Edit Nursing Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, NursingEdit model)
@@ -101,6 +105,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // GET : Nursing Data
         public ActionResult Delete(int id)
         {
             var svc = CreateNursingService();
@@ -109,6 +114,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Delete Nursing Data
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

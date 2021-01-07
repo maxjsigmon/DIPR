@@ -9,6 +9,18 @@
 <p>
     @Html.ActionLink("Create Nursing Data", "Create")
 </p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
 <table class="table">
     <tr>
         <th>
@@ -28,26 +40,27 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TimeFed)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.FeedingSide)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Notes)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.NursingID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.NursingID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.NursingID })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeFed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeedingSide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.NursingID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.NursingID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.NursingID })
+            </td>
+        </tr>
+    }
 
 </table>

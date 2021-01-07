@@ -21,14 +21,14 @@ namespace DIPR.Models.Sleep
 
         [Required]
         [Display(Name = "Sleep Starting Time:")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Required]
         [Display(Name = "Sleep End Time:")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
         [Display(Name = "Notes:")]
