@@ -28,7 +28,8 @@ namespace DIPR.Data
         public DateTime BirthDate { get; set; }
         public string Notes { get; set; }
 
-        //public virtual Diaper Diaper { get; set; }
+        public virtual Diaper Diaper { get; set; }
+
         //public virtual BottleFeeding BottleFeeding { get; set; }
         //public virtual Nursing Nursing { get; set; }
         //public virtual Sleep Sleep { get; set; }
