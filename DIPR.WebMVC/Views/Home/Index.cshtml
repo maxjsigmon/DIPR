@@ -15,18 +15,38 @@
 
 <div class="row">
     <div class="col-md-6">
-        <h2>Getting started with DIPR</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.
-        </p>
         @if (!Request.IsAuthenticated)
         {
-            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a></p> 
-            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>    
+            <h2>Getting started with DIPR</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium lobortis magna, fringilla ullamcorper arcu molestie eget. Donec maximus eros ut odio feugiat finibus. Aliquam in dictum elit, eget euismod enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec luctus feugiat rhoncus. Praesent tempus ex eget erat iaculis, eget fermentum neque pulvinar. Suspendisse porta est eros. Aliquam vel nibh sit amet leo tristique lobortis ultricies placerat erat.
+            </p>
+
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a></p>
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>
         }
+
         else
         {
-            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Baby">See my Data</a></p>
+            <h2>What would you like to do?</h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a>Add Data</a>
+                        </h4>
+                    </div>
+                    <div>
+                        <ul class="list-group">
+                            <li class="list-group-item">@Html.ActionLink("Add a Baby", "Create", "Baby")</li>
+                            <li class="list-group-item"> @Html.ActionLink("Add a Diaper", "Create", "Diaper")</li>
+                            <li class="list-group-item"> @Html.ActionLink("Add Sleep Data", "Create", "Sleep")</li>
+                            <li class="list-group-item">@Html.ActionLink("Add a Bottle", "Create", "Bottle") </li>
+                            <li class="list-group-item">@Html.ActionLink("Add Nursing Data", "Create", "Nursing") </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         }
 
     </div>

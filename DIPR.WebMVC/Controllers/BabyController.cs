@@ -32,6 +32,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // POST : Create Baby
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(BabyCreate model)
@@ -49,9 +50,10 @@ namespace DIPR.WebMVC.Controllers
             ModelState.AddModelError("", "Your baby could not be added. Please, try again.");
 
             return View(model);
-
         }
 
+        // GET : Baby Details by ID
+        [HttpGet]
         public ActionResult Details(int id)
         {
             var svc = CreateBabyService();
@@ -60,6 +62,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Baby Details by ID
         public ActionResult Edit(int id)
         {
             var service = CreateBabyService();
@@ -76,17 +79,12 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Baby Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, BabyEdit model)
         {
             if (!ModelState.IsValid) return View(model);
-
-            //if (model.BabyID != id)
-            //{
-            //    ModelState.AddModelError("", "ID Mismatch");
-            //    return View(model);
-            //}
             var service = CreateBabyService();
 
             if (service.UpdateBaby(model))
@@ -99,6 +97,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // GET : Baby Details by ID
         public ActionResult Delete(int id)
         {
             var svc = CreateBabyService();
@@ -107,7 +106,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
-
+        // POST : Delete Baby Data
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

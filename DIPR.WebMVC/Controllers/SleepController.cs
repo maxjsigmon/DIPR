@@ -26,6 +26,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // POST : Create Sleep Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(SleepCreate model)
@@ -45,6 +46,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Sleep Data by ID
         public ActionResult Details(int id)
         {
             var svc = CreateSleepService();
@@ -53,6 +55,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // GET : Sleep Data
         public ActionResult Edit(int id)
         {
             var service = CreateSleepService();
@@ -80,6 +83,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Edit Sleep Data
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, SleepEdit model)
@@ -103,6 +107,7 @@ namespace DIPR.WebMVC.Controllers
             return View();
         }
 
+        // GET : Sleep Data
         public ActionResult Delete(int id)
         {
             var svc = CreateSleepService();
@@ -111,6 +116,7 @@ namespace DIPR.WebMVC.Controllers
             return View(model);
         }
 
+        // POST : Delete Sleep Data
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
