@@ -27,17 +27,17 @@ namespace DIPR.Models.Nursing
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
 
-        public NursingCreate()
-        {
-            FeedingSideList = GetFeedingSideSelectList();
-        }
+        //public NursingCreate()
+        //{
+        //    FeedingSideList = GetFeedingSideSelectList();
+        //}
 
         public SelectList FeedingSideList { get; set; }
 
-        public static SelectList GetFeedingSideSelectList()
-        {
-            var enumValues = Enum.GetValues(typeof(Contents)).Cast<Contents>().Select(e => new { Value = e.ToString(), Text = e.ToString() }).ToList();
-            return new SelectList(enumValues, "Value", "Text", "");
-        }
+        //public static SelectList GetFeedingSideSelectList()
+        //{
+        //    var enumValues = Enum.GetValues(typeof(Contents)).Cast<Contents>().Select(e => new { Value = e.ToString(), Text = e.ToString() }).ToList();
+        //    return new SelectList(enumValues, "Value", "Text", "");
+        //}
     }
 }

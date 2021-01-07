@@ -79,43 +79,6 @@
     <Compile Include="BottleFeeding.cs" />
     <Compile Include="Diaper.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012152305402_InitialCreate.cs" />
-    <Compile Include="Migrations\202012152305402_InitialCreate.Designer.cs">
-      <DependentUpon>202012152305402_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012161439454_added-bottlefeeding.cs" />
-    <Compile Include="Migrations\202012161439454_added-bottlefeeding.Designer.cs">
-      <DependentUpon>202012161439454_added-bottlefeeding.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012161557448_updated-listitem.cs" />
-    <Compile Include="Migrations\202012161557448_updated-listitem.Designer.cs">
-      <DependentUpon>202012161557448_updated-listitem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012161923483_added-nursing.cs" />
-    <Compile Include="Migrations\202012161923483_added-nursing.Designer.cs">
-      <DependentUpon>202012161923483_added-nursing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012181543442_undo-create.cs" />
-    <Compile Include="Migrations\202012181543442_undo-create.Designer.cs">
-      <DependentUpon>202012181543442_undo-create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012181928111_update-nursing-props.cs" />
-    <Compile Include="Migrations\202012181928111_update-nursing-props.Designer.cs">
-      <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101041600480_name-property.cs" />
-    <Compile Include="Migrations\202101041600480_name-property.Designer.cs">
-      <DependentUpon>202101041600480_name-property.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101041732239_update-diaper-class.cs" />
-    <Compile Include="Migrations\202101041732239_update-diaper-class.Designer.cs">
-      <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101042126493_user-update.cs" />
-    <Compile Include="Migrations\202101042126493_user-update.Designer.cs">
-      <DependentUpon>202101042126493_user-update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sleep.cs" />
@@ -123,35 +86,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012152305402_InitialCreate.resx">
-      <DependentUpon>202012152305402_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012161439454_added-bottlefeeding.resx">
-      <DependentUpon>202012161439454_added-bottlefeeding.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012161557448_updated-listitem.resx">
-      <DependentUpon>202012161557448_updated-listitem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012161923483_added-nursing.resx">
-      <DependentUpon>202012161923483_added-nursing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012181543442_undo-create.resx">
-      <DependentUpon>202012181543442_undo-create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012181928111_update-nursing-props.resx">
-      <DependentUpon>202012181928111_update-nursing-props.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101041600480_name-property.resx">
-      <DependentUpon>202101041600480_name-property.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101041732239_update-diaper-class.resx">
-      <DependentUpon>202101041732239_update-diaper-class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101042126493_user-update.resx">
-      <DependentUpon>202101042126493_user-update.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

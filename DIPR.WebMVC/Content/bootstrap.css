@@ -5,7 +5,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: 'Oxygen', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -2044,6 +2044,7 @@ pre code {
   }
   .col-md-6 {
     width: 50%;
+    font-size: 17px;
   }
   .col-md-5 {
     width: 41.66666667%;
@@ -2385,6 +2386,7 @@ th {
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  font-size: 15px;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -4673,7 +4675,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
         font-size: 25px;
         font-weight: bold;
         overflow: hidden;
-        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background: linear-gradient(to right, #fa394a,  #fa394a 50%, white 50% );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -4694,7 +4696,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
         font-size: 16px;
         font-weight: bold;
         overflow: hidden;
-        background: linear-gradient(to right, #E63946, #E63946 50%, white 50% );
+        background: linear-gradient(to right, #fa394a,  #fa394a 50%, white 50% );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -5053,12 +5055,11 @@ a.badge:focus {
 }
 .jumbotron {
     margin-top: 1px;
-    padding-top: 30px;
+    padding-top: 35px;
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
     background-color: transparent;
-    text-align: center;
     border: 0px;
 }
 .jumbotron h1,
@@ -5084,8 +5085,8 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 15px;
+    padding-bottom: 0px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
@@ -5578,6 +5579,7 @@ button.list-group-item-danger.active:focus {
 .panel-title > small > a,
 .panel-title > .small > a {
   color: white !important;
+  font-size: 19px;
 }
 .panel-footer {
     padding: 10px 15px;
@@ -5774,6 +5776,8 @@ button.list-group-item-danger.active:focus {
 .panel-group .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse > .list-group {
   border-top: 1px solid #ddd;
+  font-size: 15px;
+  
 }
 .panel-group .panel-footer {
   border-top: 0;
