@@ -15,6 +15,8 @@ namespace DIPR.Models.Bottle
         public int BabyID { get; set; }
 
         [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         [Display(Name = "Time:")]
         public DateTime Time { get; set; }
 

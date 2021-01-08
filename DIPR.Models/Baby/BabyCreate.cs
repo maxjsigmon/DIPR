@@ -23,6 +23,7 @@ namespace DIPR.Models
         public Gender Gender { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         [Display(Name ="Birth Date:")]
         public DateTime BirthDate { get; set; }
 

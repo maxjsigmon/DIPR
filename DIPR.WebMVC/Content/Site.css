@@ -26,6 +26,10 @@ textarea {
     max-width: 300px;
 }
 
-footer{
+.panel-group .panel-heading p:hover {
+    font-weight: normal !important;
+}
+
+footer {
     text-align: center !important;
 }

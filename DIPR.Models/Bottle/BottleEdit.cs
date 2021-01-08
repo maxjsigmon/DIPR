@@ -18,6 +18,8 @@ namespace DIPR.Models.Bottle
         public int BottleID { get; set; }
 
         [Display(Name = "Time:")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime Time { get; set; }
 
         [Display(Name = "Quantity:")]

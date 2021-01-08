@@ -17,6 +17,7 @@ namespace DIPR.Models.Baby
         public string Name { get; set; }
 
         [Display(Name = "Birth Date:")]
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
 
         [Display(Name = "Gender:")]
