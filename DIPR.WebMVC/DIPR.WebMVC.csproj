@@ -271,7 +271,6 @@
     <Content Include="Views\Nursing\Details.cshtml" />
     <Content Include="Views\Nursing\Edit.cshtml" />
     <Content Include="Views\Nursing\Delete.cshtml" />
-    <Content Include="Views\Doctor Connect\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
