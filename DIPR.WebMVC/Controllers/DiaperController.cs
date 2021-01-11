@@ -23,7 +23,20 @@ namespace DIPR.WebMVC.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            var babyService = CreateBabyService();
+            var babies = babyService.GetBaby()
+              .Select(x => new
+              {
+                  Text = x.Name,
+                  Value = x.BabyID
+              });
+
+            var model = new DiaperCreate()
+            {
+                Babies = new SelectList(babies, "Value", "Text")
+            };
+
+            return View(model);
         }
 
         // POST : Create Diaper Data
