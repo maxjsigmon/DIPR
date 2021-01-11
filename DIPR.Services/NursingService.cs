@@ -24,6 +24,7 @@ namespace DIPR.Services
                 {
                     ParentID = _userID,
                     BabyID = model.BabyID,
+                    Time = model.Time,
                     TimeFed = model.TimeFed,
                     FeedingSide = model.FeedingSide,
                     Notes = model.Notes,
@@ -50,6 +51,7 @@ namespace DIPR.Services
                                 {
                                     Name = e.Baby.Name,
                                     NursingID = e.ID,
+                                    Time = e.Time,
                                     TimeFed = e.TimeFed,
                                     FeedingSide = e.FeedingSide,
                                     Notes = e.Notes,
@@ -89,6 +91,7 @@ namespace DIPR.Services
                     ctx
                         .Nursings
                         .Single(e => e.ID == model.NursingID && e.ParentID == _userID);
+                entity.Time = model.Time;
                 entity.TimeFed = model.TimeFed;
                 entity.Name = model.Name;
                 entity.FeedingSide = model.FeedingSide;

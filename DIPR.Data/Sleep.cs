@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace DIPR.Data
 {
@@ -21,14 +22,14 @@ namespace DIPR.Data
 
         [Required]
         [Display(Name ="Sleep Starting Time")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "dd-mm-yy 0:H:mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Required]
         [Display(Name ="Sleep End Time")]
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
         [Display(Name ="Total Time Slept")]

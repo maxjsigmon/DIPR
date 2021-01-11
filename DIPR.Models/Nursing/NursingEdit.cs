@@ -17,6 +17,11 @@ namespace DIPR.Models.Nursing
         [Display(Name = "Nursing ID #:")]
         public int NursingID { get; set; }
 
+        [Display(Name = "Time:")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        public DateTime Time { get; set; }
+
         [Display(Name = "Time Spent Feeding:")]
         public decimal TimeFed { get; set; }
 

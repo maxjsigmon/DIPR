@@ -75,6 +75,7 @@
     <Compile Include="Diaper\DiaperDetails.cs" />
     <Compile Include="Diaper\DiaperEdit.cs" />
     <Compile Include="Diaper\DiaperListItem.cs" />
+    <Compile Include="Doctor Connect\DoctorConnect.cs" />
     <Compile Include="Nursing\NursingCreate.cs" />
     <Compile Include="Nursing\NursingDetail.cs" />
     <Compile Include="Nursing\NursingEdit.cs" />

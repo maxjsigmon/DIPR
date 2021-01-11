@@ -82,11 +82,6 @@
     <Compile Include="BottleFeeding.cs" />
     <Compile Include="Diaper.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202101071624255_migration-update.cs" />
-    <Compile Include="Migrations\202101071624255_migration-update.designer.cs">
-      <DependentUpon>202101071624255_migration-update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sleep.cs" />
@@ -94,11 +89,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101071624255_migration-update.resx">
-      <DependentUpon>202101071624255_migration-update.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -17,6 +17,9 @@ namespace DIPR.Data
         public Guid ParentID { get; set; }
 
         [Required]
+        public DateTime Time { get; set; }
+
+        [Required]
         public decimal TimeFed { get; set; }
 
         public string Name { get; set; }
