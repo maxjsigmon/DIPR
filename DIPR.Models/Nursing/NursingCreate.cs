@@ -33,6 +33,9 @@ namespace DIPR.Models.Nursing
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
 
+        [Display(Name = "Baby:")]
+        public SelectList Babies { get; set; }
+
         //public NursingCreate()
         //{
         //    FeedingSideList = GetFeedingSideSelectList();

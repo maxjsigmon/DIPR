@@ -36,6 +36,9 @@ namespace DIPR.Models.Diaper
             SoiledList = GetSoiledSelectList();
         }
 
+        [Display(Name = "Baby:")]
+        public SelectList Babies { get; set; }
+
         public SelectList SoiledList { get; set; }
         
         public static SelectList GetSoiledSelectList()
