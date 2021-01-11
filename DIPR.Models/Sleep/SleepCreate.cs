@@ -21,19 +21,22 @@ namespace DIPR.Models.Sleep
 
         [Required]
         [Display(Name = "Sleep Starting Time:")]
-        [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.DateTime)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "MM/dd/yy 0:hh:mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Required]
         [Display(Name = "Sleep End Time:")]
-        [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [DataType(DataType.DateTime)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
         [Display(Name = "Notes:")]
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
+
+        [Display(Name = "Baby:")]
+        public SelectList Babies { get; set; }
 
         public SleepCreate()
         {
@@ -46,6 +49,6 @@ namespace DIPR.Models.Sleep
         {
             var enumValues = Enum.GetValues(typeof(Location)).Cast<Location>().Select(e => new { Value = e.ToString(), Text = e.ToString() }).ToList();
             return new SelectList(enumValues, "Value", "Text", "");
-        }
+        }   
     }
 }

@@ -15,6 +15,12 @@ namespace DIPR.Models.Nursing
         public int BabyID { get; set; }
 
         [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
+        [Display(Name ="Time:")]
+        public DateTime Time { get; set; }
+
+        [Required]
         [Display(Name = "Time Spent Feeding (Minutes):")]
         public decimal TimeFed { get; set; }
 

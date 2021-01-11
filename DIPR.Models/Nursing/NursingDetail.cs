@@ -15,6 +15,9 @@ namespace DIPR.Models.Nursing
         [Display(Name = "Nursing ID #:")]
         public int NursingID { get; set; }
 
+        [Display(Name = "Time:")]
+        public DateTime Time { get; set; }
+
         [Display(Name = "Name:")]
         public string Name { get; set; }
 

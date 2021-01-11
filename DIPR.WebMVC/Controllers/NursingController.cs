@@ -71,6 +71,7 @@ namespace DIPR.WebMVC.Controllers
                 new NursingEdit
                 {
                     NursingID = detail.NursingID,
+                    Time = detail.Time,
                     TimeFed = detail.TimeFed,
                     Name = detail.Name,
                     FeedingSide = detail.FeedingSide,

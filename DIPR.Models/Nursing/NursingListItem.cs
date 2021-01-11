@@ -15,6 +15,9 @@ namespace DIPR.Models.Nursing
         public int NursingID { get; set; }
         public string Name { get; set; }
 
+        [Display(Name = "Time")]
+        public DateTime Time { get; set; }
+
         [Display(Name ="Time Spent Feeding")]
         public decimal TimeFed { get; set; }
 
