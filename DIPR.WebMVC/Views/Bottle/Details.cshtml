@@ -1,0 +1,58 @@
+﻿@model DIPR.Models.Bottle.BottleDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Bottles</h2>
+
+<div>
+    <h4>Bottle Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BottleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BottleID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contents)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contents)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Consumed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Consumed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

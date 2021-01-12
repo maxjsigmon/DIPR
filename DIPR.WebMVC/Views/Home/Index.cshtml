@@ -1,31 +1,58 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+
+@{
     ViewBag.Title = "Home";
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>
+        <small class="text-muted">Welcome to</small>
+        DIPR
+    </h1>
+
+    <p class="lead">Hi! DIPR was designed new parents in mind. The first few days of your newborn's life on this side of the womb can be hectic. Your doctor likely wants as much information on your baby as you can possibly give to ensure they are adjusting properly. We here at DIPR want to make sure you're able to track all that vital data without having to get a pen and find that chart where your spouse left who knows where! We've got it all right in the palm of your hand. Spend less time tracking and more with your baby. </p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        @if (!Request.IsAuthenticated)
+        {
+            <h2>Getting started with DIPR</h2>
+            <p>
+                First, welcome to DIPR! We're so glad you've stopped by! New users to the site can unlock all the features we have to offer by hitting the "Register" button below! We only need an email and a password for you to get started! After that, you will want to add your baby (or babies) into the system. That will allow you to begin tracking all that lovely data for yourself and your pediatrician! Happy tracking and let us know up in the "Contact" tab if there is anything you need!
+            </p>
+
+            <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Register">Register</a> <a class="btn btn-default btn-lg" href="https://localhost:44354/Account/Login">Login</a></p>
+        }
+
+        else
+        {
+            <h2>What would you like to do?</h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <p>Add Data</p>
+                        </h4>
+                    </div>
+                    <div>
+                        <ul class="list-group">
+                            <li class="list-group-item">@Html.ActionLink("Add a Baby", "Create", "Baby")</li>
+                            <li class="list-group-item"> @Html.ActionLink("Add a Diaper", "Create", "Diaper")</li>
+                            <li class="list-group-item"> @Html.ActionLink("Add Sleep Data", "Create", "Sleep")</li>
+                            <li class="list-group-item">@Html.ActionLink("Add a Bottle", "Create", "Bottle") </li>
+                            <li class="list-group-item">@Html.ActionLink("Add Nursing Data", "Create", "Nursing") </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>Baby 101</h2>
+        <p>Baby 101 is our homegrown blog from our staff, experts in the field, and parents like you! We host writings on all topics to get you through the first days of parenthood to when your nest is beginning to empty.Let us curate that for you with the best of the best from our trusted partners. Our helpful labels on each post will let you know if the article is simply an opinion article, or advice from a trusted source or expert.</p>
+        <p>We love submissions from our DIPR users, so if you would like to contribute to Baby 101, send us your article to baby101@dipr.com for consideration to be featured!</p>
+        <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Home/About"> Go to Baby 101 &#128207;</a></p>
     </div>
 </div>

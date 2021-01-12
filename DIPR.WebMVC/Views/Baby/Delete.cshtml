@@ -1,0 +1,40 @@
+﻿@model DIPR.Models.Baby.BabyDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Babies</h2>
+
+<h3>Remove Baby Data</h3>
+<div>
+    <h4>Are you sure you want to remove this baby and all associated data?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BabyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BabyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

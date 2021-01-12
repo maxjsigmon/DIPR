@@ -1,0 +1,81 @@
+﻿@model IEnumerable<DIPR.Models.Sleep.SleepListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sleep</h2>
+
+<p>
+    @Html.ActionLink("Add Sleep Data", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SleepStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SleepEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalSleep)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            <p>Actions</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SleepStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SleepEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSleep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SleepID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SleepID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SleepID })
+            </td>
+        </tr>
+    }
+
+</table>
