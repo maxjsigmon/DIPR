@@ -18,7 +18,7 @@ namespace DIPR.Models.Nursing
         [Display(Name = "Time")]
         public DateTime Time { get; set; }
 
-        [Display(Name ="Time Spent Feeding")]
+        [Display(Name ="Time Spent Feeding (Minutes)")]
         public decimal TimeFed { get; set; }
 
         [Display(Name ="Left or Right Side")]

@@ -37,9 +37,6 @@
 }
     <table class="table">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BabyID)
-            </th>
 
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -63,9 +60,6 @@
         @foreach (var item in Model)
         {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BabyID)
-        </td>
 
         <td>
             @Html.DisplayFor(modelItem => item.Name)

@@ -36,8 +36,6 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.SleepStart, new { htmlAttributes = new { @class = "form-control time" } })
             @Html.ValidationMessageFor(model => model.SleepStart, "", new { @class = "text-danger" })
-            <p>Enter time as MM/dd/yy hh:mm AM or PM </p>
-            <p>e.g. 12/15/2020 11:30 PM </p>
         </div>
 
     </div>
@@ -45,9 +43,8 @@
     <div class="form-group">
         @Html.LabelFor(model => model.SleepEnd, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.SleepEnd, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.SleepEnd, new { htmlAttributes = new { @class = "form-control time" } })
             @Html.ValidationMessageFor(model => model.SleepEnd, "", new { @class = "text-danger" })
-            <p>Enter time as MM/dd/yy hh:mm AM or PM </p>
         </div>
     </div>
 
@@ -61,13 +58,13 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Create" class="btn btn-success" />
         </div>
     </div>
 
     <button type="button"
             onclick="document.getElementById('dateTime').innerHTML = Date()">
-        Click to display the current Date and Time.
+        Click to display the current date and time
     </button>
 
     <p id="dateTime"></p>
@@ -82,9 +79,7 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 <script>
-    $('.time').datetimepicker({
-  
-    });
+    $('.time').datetimepicker('setStartDate', '2021-01-01');
     </script>
 }
 
