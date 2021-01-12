@@ -82,6 +82,15 @@
     <Compile Include="BottleFeeding.cs" />
     <Compile Include="Diaper.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202101121858131_InitialCreate.cs" />
+    <Compile Include="Migrations\202101121858131_InitialCreate.designer.cs">
+      <DependentUpon>202101121858131_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121954113_publish.cs" />
+    <Compile Include="Migrations\202101121954113_publish.designer.cs">
+      <DependentUpon>202101121954113_publish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nursing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sleep.cs" />
@@ -89,6 +98,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101121858131_InitialCreate.resx">
+      <DependentUpon>202101121858131_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121954113_publish.resx">
+      <DependentUpon>202101121954113_publish.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
