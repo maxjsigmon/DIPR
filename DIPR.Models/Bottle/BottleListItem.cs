@@ -16,7 +16,11 @@ namespace DIPR.Models.Bottle
         public string Name { get; set; }
         public DateTime Time { get; set; }
         public Contents Contents { get; set; }
+
+        [Display(Name="Quantity (Oz.)")]
         public decimal Quantity { get; set; }
+
+        [Display(Name = "Consumed (Oz.)")]
         public decimal Consumed { get; set; }
         public string Notes { get; set; }
 

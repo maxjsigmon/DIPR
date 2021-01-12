@@ -22,10 +22,10 @@ namespace DIPR.Models.Bottle
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime Time { get; set; }
 
-        [Display(Name = "Quantity:")]
+        [Display(Name = "Quantity (Oz.):")]
         public decimal Quantity { get; set; }
 
-        [Display(Name = "Consumed:")]
+        [Display(Name = "Consumed (Oz.):")]
         public decimal Consumed { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = "Select a Correct Content Type")]

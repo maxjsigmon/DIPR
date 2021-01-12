@@ -21,11 +21,11 @@ namespace DIPR.Models.Bottle
         public DateTime Time { get; set; }
 
         [Required]
-        [Display(Name = "Quantity:")]
+        [Display(Name = "Quantity (Oz.):")]
         public decimal Quantity { get; set; }
 
         [Required]
-        [Display(Name = "Consumed:")]
+        [Display(Name = "Consumed (Oz.):")]
         public decimal Consumed { get; set; }
 
         [Required]
