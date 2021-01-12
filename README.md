@@ -16,7 +16,7 @@ The goal was to design a website
 
 
 ### Design
-- [Color Scheme](https://coolors.co/fa394a-1d3557-a8dadc-ebebeb)
+- [Color Scheme](https://coolors.co/fa394a-1d3557-a8dadc-ebebeb-ffffff)
 - [Google Fonts](https://fonts.google.com/specimen/Oxygen)
 
 ### Screenshots
