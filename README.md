@@ -31,22 +31,27 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 
 ### Design
 #### Color Scheme
-- ![Color Scheme](/DIPR.WebMVC/Assets/colorscheme.png)
+![Color Scheme](/DIPR.WebMVC/Assets/colorscheme.png)
 
 #### Font
-- [Google Fonts](https://fonts.google.com/specimen/Oxygen)
+[Google Fonts](https://fonts.google.com/specimen/Oxygen)
 
 ### Screenshots
 #### Home Pages
-![Logged Out Home Page]()
-![Logged In Home Page]()
-#### Baby Index Page
-![Baby Index Page]()
-#### Get a Product and it's Reviews
-![Getting A Single Product]()
-#### Get a Review
-![Getting A Single Review]()
+![Logged Out Home Page](/DIPR.WebMVC/Assets/DIPRLogOut.png)
+![Logged In Home Page](/DIPR.WebMVC/Assets/DIPR.png)
 
+#### Baby Index Page
+![Baby Index Page](/DIPR.WebMVC/Assets/BabyPage.png)
+
+#### Create Page
+![Create Page](/DIPR.WebMVC/Assets/CreatePage.png)
+
+#### Data Tables
+![Data Tables](/DIPR.WebMVC/Assets/DiaperPage.png)
+
+#### Baby 101 Blog Page
+![Baby 101](/DIPR.WebMVC/Assets/Baby101.png)
 
 ### Contact
 If you want to contact me you can do so at max.j.sigmon@gmail.com
