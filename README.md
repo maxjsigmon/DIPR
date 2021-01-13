@@ -31,7 +31,7 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 
 ### Design
 #### Color Scheme
-- ![Color Scheme](/DIPR.WebMVC/Assets/colorscheme.png)
+- ![Color Scheme](/Assets/colorscheme.png)
 - [Google Fonts](https://fonts.google.com/specimen/Oxygen)
 
 ### Screenshots
