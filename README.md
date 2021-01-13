@@ -1,5 +1,8 @@
 # DIPR
 
+### Azure Deployment
+[Dipr Azure](https://diprapp.azurewebsites.net/)
+
 ### The Purpose
 
 
