@@ -21,8 +21,7 @@
             <p>
                 First, welcome to DIPR! We're so glad you've stopped by! New users to the site can unlock all the features we have to offer by hitting the "Register" button below! We only need an email and a password for you to get started! After that, you will want to add your baby (or babies) into the system. That will allow you to begin tracking all that lovely data for yourself and your pediatrician! Happy tracking and let us know up in the "Contact" tab if there is anything you need!
             </p>
-
-            <p><a class="btn btn-default btn-lg" href="https://dipr.azurewebsites.net/Account/Register">Register</a> <a class="btn btn-default btn-lg" href="https://dipr.azurewebsites.net/Account/Login">Login</a></p>
+            <button class="btn btn-default btn-lg">@Html.ActionLink("Register", "Register", "Account")</button> <button class="btn btn-default btn-lg">@Html.ActionLink("Log in", "Login", "Account")</button>
         }
 
         else
@@ -52,7 +51,7 @@
     <div class="col-md-6">
         <h2>Baby 101</h2>
         <p>Baby 101 is our homegrown blog from our staff, experts in the field, and parents like you! We host writings on all topics to get you through the first days of parenthood to when your nest is beginning to empty. Let us curate that for you with the best of the best from our trusted partners. Our helpful labels on each post will let you know if the article is simply an opinion article, or advice from a trusted source or expert.</p>
-        <p>We love submissions from our DIPR users, so if you would like to contribute to Baby 101, send us your article to baby101@dipr.com for consideration to be featured!</p>
-        <p><a class="btn btn-default btn-lg" href="https://localhost:44354/Home/About"> Go to Baby 101 &#128207;</a></p>
+        <p>We love submissions from our DIPR users. If you would like to contribute to Baby 101, send us your article to baby101@dipr.com for consideration to be featured!</p>
+        <button class="btn btn-default btn-lg">@Html.ActionLink("Baby 101", "About", "Home")</button>
     </div>
 </div>
