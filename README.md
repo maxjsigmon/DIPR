@@ -38,7 +38,10 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 
 ### Screenshots
 #### Home Pages
+##### Logged Out View
 ![Logged Out Home Page](/DIPR.WebMVC/Assets/DIPRLogOut.png)
+
+##### Logged In View
 ![Logged In Home Page](/DIPR.WebMVC/Assets/DIPR.png)
 
 #### Baby Index Page
