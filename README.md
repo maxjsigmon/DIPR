@@ -1,7 +1,7 @@
 # DIPR
 
 ### Azure Deployment
-[DIPR Azure](https://diprapp.azurewebsites.net/)
+- [DIPR Azure](https://diprapp.azurewebsites.net/)
 
 ### The Concept
 The goal was to design an application for parents of newborns, so they can track feedings, sleep, and diapers to then be able to report that data to their doctor. 
@@ -34,6 +34,16 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 - [Google Fonts](https://fonts.google.com/specimen/Oxygen)
 
 ### Screenshots
+#### Home Pages
+![Logged Out Home Page]()
+![Logged In Home Page]()
+#### Baby Index Page
+![Baby Index Page]()
+#### Get a Product and it's Reviews
+![Getting A Single Product]()
+#### Get a Review
+![Getting A Single Review]()
+
 
 ### Contact
 If you want to contact me you can do so at max.j.sigmon@gmail.com
