@@ -25,9 +25,9 @@ https://github.com/maxjsigmon/DIPR.git
 ```sh
 $ git clone https://github.com/maxjsigmon/DIPR.git
 ```
--Press Enter to create your local clone
--Run the appplication and read the "Getting Started" section of the home page
--Add Data
+- Press Enter to create your local clone
+- Run the appplication and read the "Getting Started" section of the home page
+- Add Data
 
 ### Design
 - [Color Scheme](https://coolors.co/fa394a-1d3557-a8dadc-ebebeb-ffffff)
