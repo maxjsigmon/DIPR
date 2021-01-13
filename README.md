@@ -15,8 +15,19 @@ The goal was to design an application for parents of newborns, so they can track
 - Baby 101 blog
 
 ### How to get it running
-- Clone repository from the [DIPR Github](https://github.com/maxjsigmon/DIPR)
-
+- Clone the repository:
+```sh
+https://github.com/maxjsigmon/DIPR.git
+```
+- Open Git Bash (Or Command Line Window)
+- Change the current working directory to the location where you want the cloned directory
+- Type git clone, and then paste the URL you copied earlier
+```sh
+$ git clone https://github.com/maxjsigmon/DIPR.git
+```
+-Press Enter to create your local clone
+-Run the appplication and read the "Getting Started" section of the home page
+-Add Data
 
 ### Design
 - [Color Scheme](https://coolors.co/fa394a-1d3557-a8dadc-ebebeb-ffffff)
