@@ -30,7 +30,8 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 - Add Data
 
 ### Design
-- [Color Scheme](https://coolors.co/fa394a-1d3557-a8dadc-ebebeb-ffffff)
+#### Color Scheme
+- ![Color Scheme](/DIPR.WebMVC/Assets/colorscheme.png)
 - [Google Fonts](https://fonts.google.com/specimen/Oxygen)
 
 ### Screenshots
