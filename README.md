@@ -45,7 +45,11 @@ $ git clone https://github.com/maxjsigmon/DIPR.git
 ![Logged In Home Page](/DIPR.WebMVC/Assets/DIPR.png)
 
 #### Baby Index Page
+##### Index Page with menu up
 ![Baby Index Page](/DIPR.WebMVC/Assets/BabyPage.png)
+
+##### Index Page with menu down
+![Baby Index Page Menu](/DIPR.WebMVC/Assets/babydatadropdown.png)
 
 #### Create Page
 ![Create Page](/DIPR.WebMVC/Assets/CreatePage.png)
