@@ -1,7 +1,7 @@
 # DIPR
 
 ### Azure Deployment
-- [DIPR Azure](https://diprapp.azurewebsites.net/)
+- [DIPR Azure](https://diprapp.azurewebsites.net/) (Not Currently Fully Operational)
 
 ### The Concept
 The goal was to design an application for parents of newborns, so they can track feedings, sleep, and diapers to then be able to report that data to their doctor. 
