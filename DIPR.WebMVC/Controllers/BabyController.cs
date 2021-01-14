@@ -15,7 +15,6 @@ namespace DIPR.WebMVC.Controllers
     [Authorize]
     public class BabyController : Controller
     {
-        //private ApplicationDbContext _babyDb = new ApplicationDbContext();
 
         // GET: Baby
         public ActionResult Index()

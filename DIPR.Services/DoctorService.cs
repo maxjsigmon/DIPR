@@ -8,18 +8,5 @@ using System.Threading.Tasks;
 
 namespace DIPR.Services
 {
-    //public class DoctorService
-    //{
-    //    private readonly Guid _userID;
-
-    //    public DoctorService(Guid userID)
-    //    {
-    //        _userID = userID;
-    //    }
-
-    //    public IEnumerable<DoctorConnect> GetAllBabyData()
-    //    {
-            
-    //    }
-    //}
+    
 }
