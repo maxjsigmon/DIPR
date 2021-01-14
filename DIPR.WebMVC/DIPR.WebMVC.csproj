@@ -185,8 +185,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Baby101.png" />
+    <Content Include="Assets\babydatadropdown.png" />
+    <Content Include="Assets\BabyPage.png" />
+    <Content Include="Assets\colorscheme.png" />
+    <Content Include="Assets\CreatePage.png" />
+    <Content Include="Assets\DiaperPage.png" />
+    <Content Include="Assets\DIPR.png" />
+    <Content Include="Assets\DIPRLogOut.png" />
     <Content Include="Assets\soft-wallpaper-texture.jpg" />
-    <Content Include="Assets\subtlewhite.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
