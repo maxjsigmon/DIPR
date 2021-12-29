@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 
 namespace DIPR.Data
 {
-   public class Sleep
+    public class Sleep
     {
         [Key]
         public int ID { get; set; }
@@ -21,18 +16,18 @@ namespace DIPR.Data
         public Location Location { get; set; }
 
         [Required]
-        [Display(Name ="Sleep Starting Time")]
+        [Display(Name = "Sleep Starting Time")]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "dd-mm-yy 0:H:mm tt")]
         public DateTime SleepStart { get; set; }
 
         [Required]
-        [Display(Name ="Sleep End Time")]
+        [Display(Name = "Sleep End Time")]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
         public DateTime SleepEnd { get; set; }
 
-        [Display(Name ="Total Time Slept")]
+        [Display(Name = "Total Time Slept")]
         public TimeSpan TotalSleep { get => SleepEnd - SleepStart; }
         public string Notes { get; set; }
 

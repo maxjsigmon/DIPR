@@ -2,9 +2,7 @@
 using DIPR.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DIPR.WebMVC.Controllers
@@ -57,7 +55,7 @@ namespace DIPR.WebMVC.Controllers
 
             if (service.CreateBottle(model))
             {
-               TempData["SaveResult"] = "Your baby's bottle has been added!";
+                TempData["SaveResult"] = "Your baby's bottle has been added!";
                 return RedirectToAction("Index");
             };
 
@@ -99,7 +97,7 @@ namespace DIPR.WebMVC.Controllers
                     Consumed = detail.Consumed,
                     Notes = detail.Notes,
                     Babies = new SelectList(babies, "Value", "Text")
-                    
+
                 };
             return View(model);
         }

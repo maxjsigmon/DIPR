@@ -1,10 +1,6 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Nursing
@@ -17,7 +13,7 @@ namespace DIPR.Models.Nursing
         [Required]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm tt")]
-        [Display(Name ="Time:")]
+        [Display(Name = "Time:")]
         public DateTime Time { get; set; }
 
         [Required]

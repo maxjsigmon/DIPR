@@ -1,10 +1,6 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DIPR.Models.Baby
 {
@@ -26,6 +22,6 @@ namespace DIPR.Models.Baby
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         [Display(Name = "Notes:")]
         public string Notes { get; set; }
-        
+
     }
 }

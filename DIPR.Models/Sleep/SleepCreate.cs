@@ -1,10 +1,7 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Sleep
@@ -49,6 +46,6 @@ namespace DIPR.Models.Sleep
         {
             var enumValues = Enum.GetValues(typeof(Location)).Cast<Location>().Select(e => new { Value = e.ToString(), Text = e.ToString() }).ToList();
             return new SelectList(enumValues, "Value", "Text", "");
-        }   
+        }
     }
 }

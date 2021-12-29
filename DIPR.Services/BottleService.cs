@@ -4,9 +4,6 @@ using DIPR.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 
 namespace DIPR.Services
 {
@@ -51,14 +48,14 @@ namespace DIPR.Services
                             e =>
                                 new BottleListItem
                                 {
-                                    
+
                                     Name = e.Baby.Name,
                                     BottleID = e.ID,
                                     Time = e.Time,
                                     Contents = e.Contents,
                                     Quantity = e.Quantity,
                                     Consumed = e.Consumed,
-                                    Notes = e.Notes        
+                                    Notes = e.Notes
                                 }
                                 );
                 return query.ToArray();

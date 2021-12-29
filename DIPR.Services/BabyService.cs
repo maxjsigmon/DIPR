@@ -1,19 +1,15 @@
 ﻿using DIPR.Data;
 using DIPR.Models;
 using DIPR.Models.Baby;
-using DIPR.Models.Bottle;
 using DIPR.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 
 
 namespace DIPR.Services
 {
-   public class BabyService
+    public class BabyService
     {
         private readonly Guid _userID;
 
@@ -64,7 +60,7 @@ namespace DIPR.Services
             }
         }
 
-       public BabyDetail GetBabyById(int id)
+        public BabyDetail GetBabyById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

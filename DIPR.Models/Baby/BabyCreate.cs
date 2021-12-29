@@ -1,11 +1,7 @@
 ﻿using DIPR.Data;
-using DIPR.Models.Baby;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models
@@ -24,7 +20,7 @@ namespace DIPR.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name ="Birth Date:")]
+        [Display(Name = "Birth Date:")]
         public DateTime BirthDate { get; set; }
 
         [Display(Name = "Notes:")]

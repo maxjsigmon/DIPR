@@ -1,13 +1,8 @@
-﻿using DIPR.Data;
-using DIPR.Models;
+﻿using DIPR.Models;
 using DIPR.Models.Baby;
 using DIPR.Services;
-using DIPR.WebMVC.Data;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DIPR.WebMVC.Controllers

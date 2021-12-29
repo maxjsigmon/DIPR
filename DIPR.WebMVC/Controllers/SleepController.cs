@@ -2,9 +2,7 @@
 using DIPR.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DIPR.WebMVC.Controllers
@@ -23,7 +21,7 @@ namespace DIPR.WebMVC.Controllers
 
         public ActionResult Create()
         {
-           
+
 
             var babyService = CreateBabyService();
             var babies = babyService.GetBaby()
@@ -94,7 +92,7 @@ namespace DIPR.WebMVC.Controllers
                     Location = detail.Location,
                     SleepStart = detail.SleepStart,
                     SleepEnd = detail.SleepEnd,
-                    Notes=  detail.Notes,
+                    Notes = detail.Notes,
                     Babies = new SelectList(babies, "Value", "Text")
 
                 };

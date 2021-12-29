@@ -1,20 +1,16 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Sleep
 {
-   public class SleepEdit
+    public class SleepEdit
     {
         [Display(Name = "Baby ID #:")]
         public int BabyID { get; set; }
 
-        [Display(Name="Sleep ID #:")]
+        [Display(Name = "Sleep ID #:")]
         public int SleepID { get; set; }
 
         [Display(Name = "Location:")]
@@ -31,11 +27,11 @@ namespace DIPR.Models.Sleep
         [Display(Name = "Sleep End Time:")]
         public DateTime SleepEnd { get; set; }
 
-        [Display(Name ="Notes:")]
+        [Display(Name = "Notes:")]
         [MaxLength(100, ErrorMessage = "Limit notes to 100 characters.")]
         public string Notes { get; set; }
 
-        [Display(Name ="Baby:")]
+        [Display(Name = "Baby:")]
         public SelectList Babies { get; set; }
     }
 }

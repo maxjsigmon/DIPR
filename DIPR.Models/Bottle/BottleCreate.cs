@@ -1,15 +1,12 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Bottle
 {
-   public class BottleCreate
+    public class BottleCreate
     {
         [Key]
         public int BabyID { get; set; }
@@ -29,7 +26,7 @@ namespace DIPR.Models.Bottle
         public decimal Consumed { get; set; }
 
         [Required]
-        [Range(1, int.MaxValue, ErrorMessage ="Select a Content Type")]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a Content Type")]
         [Display(Name = "Contents:")]
         public Contents Contents { get; set; }
 
@@ -41,10 +38,10 @@ namespace DIPR.Models.Bottle
 
         [Display(Name = "Baby:")]
         public SelectList Babies { get; set; }
- 
+
         public BottleCreate()
         {
-            ContentsList = GetContentsSelectList();         
+            ContentsList = GetContentsSelectList();
         }
 
         public SelectList ContentsList { get; set; }

@@ -1,17 +1,13 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Bottle
 {
     public class BottleEdit
     {
-        
+
         public int BabyID { get; set; }
 
         [Display(Name = "Bottle ID #:")]

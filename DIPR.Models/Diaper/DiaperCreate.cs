@@ -1,10 +1,7 @@
 ﻿using DIPR.Data;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DIPR.Models.Diaper
@@ -25,7 +22,7 @@ namespace DIPR.Models.Diaper
 
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Select a Correct Soil Type")]
-        [Display(Name="Soil Type:")]
+        [Display(Name = "Soil Type:")]
         public Soiled Soiled { get; set; }
 
         [Display(Name = "Notes:")]
@@ -40,7 +37,7 @@ namespace DIPR.Models.Diaper
         public SelectList Babies { get; set; }
 
         public SelectList SoiledList { get; set; }
-        
+
         public static SelectList GetSoiledSelectList()
         {
             var enumValues = Enum.GetValues(typeof(Soiled)).Cast<Soiled>().Select(e => new { Value = e.ToString(), Text = e.ToString() }).ToList();

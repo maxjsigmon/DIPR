@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DIPR.Data
 {
-   public class Nursing
+    public class Nursing
     {
         [Key]
         public int ID { get; set; }

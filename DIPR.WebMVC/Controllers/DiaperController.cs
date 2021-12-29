@@ -2,9 +2,7 @@
 using DIPR.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DIPR.WebMVC.Controllers
@@ -89,7 +87,7 @@ namespace DIPR.WebMVC.Controllers
                     Soiled = detail.Soiled,
                     Notes = detail.Notes,
                     Babies = new SelectList(babies, "Value", "Text")
-                    
+
                 };
             return View(model);
         }

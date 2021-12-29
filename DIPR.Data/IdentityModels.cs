@@ -1,9 +1,9 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using DIPR.Data;
+﻿using DIPR.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace DIPR.WebMVC.Data
 {

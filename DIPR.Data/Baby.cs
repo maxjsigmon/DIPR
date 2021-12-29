@@ -1,14 +1,10 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DIPR.Data
 {
-    
+
     public class Baby
     {
         [Key]
@@ -24,7 +20,7 @@ namespace DIPR.Data
         public Gender Gender { get; set; }
 
         [Required]
-        [Display(Name="Birth Date")]
+        [Display(Name = "Birth Date")]
         public DateTime BirthDate { get; set; }
         public string Notes { get; set; }
 

@@ -4,8 +4,6 @@ using DIPR.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DIPR.Services
 {
@@ -78,7 +76,7 @@ namespace DIPR.Services
                         FeedingSide = entity.FeedingSide,
                         Notes = entity.Notes,
                         BabyID = entity.BabyID
-                        
+
                     };
             }
         }
@@ -97,8 +95,8 @@ namespace DIPR.Services
                 entity.FeedingSide = model.FeedingSide;
                 entity.Notes = model.Notes;
                 entity.BabyID = model.BabyID;
-                
-               
+
+
                 return ctx.SaveChanges() == 1;
             }
         }
